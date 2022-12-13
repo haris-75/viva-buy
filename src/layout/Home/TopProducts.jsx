@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { useMediaQuery } from "react-responsive";
 export function TopProducts(props) {
   const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
+    query: "(max-width: 1024px)",
   });
   return (
     <div className="mt-5 md:mt-20">
