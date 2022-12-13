@@ -8,7 +8,7 @@ export function TopProducts(props) {
     <div className="mt-5 md:mt-20">
       <div className="mb-[10px] md:mb-5">
         <h2 className="font-sans text-lg font-bold text-black sm:text-2xl md:text-3xl lg:text-4xl">
-          <span>Recently viewed </span>
+          <span>Shops we think you’ll love </span>
           <span className="font-sans font-light text-black">
             {" "}
             - based on your activity
