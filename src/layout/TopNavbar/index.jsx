@@ -3,7 +3,7 @@ import React from "react";
 export default function TopNavbar(props) {
   return (
     <div className="relative">
-      <div className="border-b-[2px] pt-[15px]">
+      <div className="pt-[15px]">
         <ul className="flex flex-row justify-between">
           <CategoryLink>Clothing & Shoes</CategoryLink>
           <CategoryLink>Jewellery & Accessories</CategoryLink>
@@ -19,7 +19,7 @@ export default function TopNavbar(props) {
 
 const CategoryLink = (props) => {
   return (
-    <li className="group grow py-[15px]">
+    <li className="group grow border-b-[2px] py-[15px]">
       <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
         {props.children}
       </span>
@@ -30,7 +30,7 @@ const CategoryLink = (props) => {
 
 const SubCategoryLink = (props) => {
   return (
-    <li className="">
+    <li className="mt-[10px]">
       <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
         {props.children}
       </span>
@@ -40,7 +40,7 @@ const SubCategoryLink = (props) => {
 
 const DropdownMenu = () => {
   return (
-    <div className="absolute top-[70px] left-0 z-1 hidden h-max max-h-[600px] w-full rounded-br-[10px] rounded-bl-[10px] bg-white py-[25px] px-[40px] shadow-md group-hover:block">
+    <div className="absolute top-[72px] left-0 z-1 hidden h-max max-h-[600px] w-full rounded-br-[10px] rounded-bl-[10px] bg-white py-[25px] px-[40px] shadow-xl group-hover:block">
       <div className="flex h-full flex-row flex-wrap gap-x-[50px] gap-y-[20px] overflow-auto">
         <div>
           <h3 className="text-[22px] font-bold">Subcategory</h3>
