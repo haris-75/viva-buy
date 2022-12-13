@@ -1,0 +1,107 @@
+import React from "react";
+
+export default function TopNavbar(props) {
+  return (
+    <div className="relative">
+      <div className="border-b-[2px] pt-[15px]">
+        <ul className="flex flex-row justify-between">
+          <CategoryLink>Clothing & Shoes</CategoryLink>
+          <CategoryLink>Jewellery & Accessories</CategoryLink>
+          <CategoryLink>Home & Living</CategoryLink>
+          <CategoryLink>Art & Crafts</CategoryLink>
+          <CategoryLink>Toys & Entertainment</CategoryLink>
+          <CategoryLink>Food & Drink</CategoryLink>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+const CategoryLink = (props) => {
+  return (
+    <li className="group grow py-[15px]">
+      <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
+        {props.children}
+      </span>
+      <DropdownMenu />
+    </li>
+  );
+};
+
+const SubCategoryLink = (props) => {
+  return (
+    <li className="">
+      <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
+        {props.children}
+      </span>
+    </li>
+  );
+};
+
+const DropdownMenu = () => {
+  return (
+    <div className="absolute top-[70px] left-0 z-1 hidden h-max max-h-[600px] w-full rounded-br-[10px] rounded-bl-[10px] bg-white py-[25px] px-[40px] shadow-md group-hover:block">
+      <div className="flex h-full flex-row flex-wrap gap-x-[50px] gap-y-[20px] overflow-auto">
+        <div>
+          <h3 className="text-[22px] font-bold">Subcategory</h3>
+          <ul className="mt-[10px] font-[22px]">
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-[22px] font-bold">Subcategory</h3>
+          <ul className="mt-[10px] font-[22px]">
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-[22px] font-bold">Subcategory</h3>
+          <ul className="mt-[10px] font-[22px]">
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-[22px] font-bold">Subcategory</h3>
+          <ul className="mt-[10px] font-[22px]">
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-[22px] font-bold">Subcategory</h3>
+          <ul className="mt-[10px] font-[22px]">
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+            <SubCategoryLink>Lorem ipsum dolor sit amet</SubCategoryLink>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
