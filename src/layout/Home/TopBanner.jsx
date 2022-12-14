@@ -9,7 +9,7 @@ import { Carousel } from "react-responsive-carousel";
 export default function TopBanner(props) {
   return (
     <div className="flex flex-row gap-5">
-      <div className="rounded-[5px]  lg:rounded-[20px]">
+      <div className="w-full rounded-[5px] lg:rounded-[20px]">
         <Carousel
           dynamicHeight={true}
           autoPlay={true}

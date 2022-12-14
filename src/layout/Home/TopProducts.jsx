@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useMediaQuery } from "react-responsive";
+
 export function TopProducts(props) {
   const isMobile = useMediaQuery({
     query: "(max-width: 1024px)",
