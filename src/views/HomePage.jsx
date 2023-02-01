@@ -5,6 +5,7 @@ import CategoryProducts from "../layout/Home/CategoryProducts";
 import RecentlyViewed from "../layout/Home/RecentlyViewed";
 import TopBanner from "../layout/Home/TopBanner";
 import TopProducts from "../layout/Home/TopProducts";
+import RegisterModal from "../components/modals/RegisterModal";
 export default function HomePage(props) {
   return (
     <div className="w-full">

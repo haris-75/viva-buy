@@ -19,8 +19,8 @@ export default function TopNavbar(props) {
 
 const CategoryLink = (props) => {
   return (
-    <li className="group grow border-b-[2px] py-[15px]">
-      <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
+    <li className="group grow border-b-[2px] border-b-[#E8E7E7] py-[15px]">
+      <span className="cursor-pointer font-sans text-sm font-medium text-black xl:text-[16px]">
         {props.children}
       </span>
       <DropdownMenu />
@@ -31,7 +31,7 @@ const CategoryLink = (props) => {
 const SubCategoryLink = (props) => {
   return (
     <li className="mt-[10px]">
-      <span className="cursor-pointer font-sans text-base font-medium text-black xl:text-[22px]">
+      <span className="cursor-pointer font-sans text-sm font-medium text-black hover:underline sm:text-[16px]">
         {props.children}
       </span>
     </li>
@@ -40,7 +40,7 @@ const SubCategoryLink = (props) => {
 
 const DropdownMenu = () => {
   return (
-    <div className="absolute top-[72px] left-0 z-1 hidden h-max max-h-[600px] w-full rounded-br-[10px] rounded-bl-[10px] bg-white py-[25px] px-[40px] shadow-xl group-hover:block">
+    <div className="absolute top-[72px] left-0 z-1 hidden h-max max-h-[600px] w-full rounded-br-[10px] rounded-bl-[10px] bg-white py-[25px] px-[40px] shadow-shadow2 group-hover:block">
       <div className="flex h-full flex-row flex-wrap gap-x-[50px] gap-y-[20px] overflow-auto">
         <div>
           <h3 className="text-[22px] font-bold">Subcategory</h3>

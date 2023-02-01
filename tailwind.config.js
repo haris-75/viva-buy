@@ -35,6 +35,7 @@ module.exports = {
       primary: "#02DFB7",
       secondary: "#FAE053",
       gray: "#D9D9D9",
+      hoverColor: "#E8E7E7",
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
@@ -93,7 +94,7 @@ module.exports = {
         "200-px": "200px",
         "210-px": "210px",
         "580-px": "580px",
-        "page-mx": "1660px",
+        "page-mx": "1278px",
       },
       minWidth: {
         "140-px": "140px",
@@ -102,6 +103,10 @@ module.exports = {
       backgroundSize: {
         full: "100%",
       },
+    },
+    boxShadow: {
+      shadow1: "0px 0px 4px rgba(0, 0, 0, 0.25)",
+      shadow2: "0px 0px 8px rgba(0, 0, 0, 0.25)",
     },
   },
   variants: [

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { H2 } from "../../components/typography";
 import { useMediaQuery } from "react-responsive";
 
 export function TopProducts(props) {
@@ -8,13 +9,13 @@ export function TopProducts(props) {
   return (
     <div className="mt-5 md:mt-20">
       <div className="mb-[10px] md:mb-5">
-        <h2 className="font-sans text-lg font-bold text-black sm:text-2xl md:text-3xl lg:text-4xl">
-          <span>Shops we think you’ll love </span>
+        <H2>
+          <span>Top products </span>
           <span className="font-sans font-light text-black">
             {" "}
-            - based on your activity
+            - best sellers on the marketplace
           </span>
-        </h2>
+        </H2>
       </div>
       <div className="flex flex-col flex-wrap sm:flex-row">
         <ProductPair index={0} />
@@ -29,16 +30,23 @@ export function TopProducts(props) {
 const ProductPair = (props) => {
   return (
     <div
-      className={`flex flex-row  sm:w-1/3 lg:w-1/4 ${
+      className={`relative flex cursor-pointer flex-row  sm:w-1/3 lg:w-1/4 ${
         props.index % 2 == 0 ? "sm:flex-col-reverse" : "sm:flex-col"
       }`}
     >
-      <div className="h-[145px] w-full p-[5px] sm:h-[280px] lg:h-[360px] lg:p-[10px]">
-        <div className="h-full w-full rounded-[5px] bg-gray md:rounded-[20px]"></div>
+      <div className="relative h-[145px] w-full max-w-[306px] p-[5px] sm:h-[280px] lg:h-[300px] lg:p-[10px]">
+        <div className="h-full w-full rounded-[5px] bg-gray transition-all hover:shadow-shadow2 md:rounded-[5px]"></div>
+        <div className="absolute top-[15px] right-[15px] rounded-[50px] border-[1px] border-solid border-black bg-white py-[2px] px-[15px] text-[10px] md:text-xs">
+          10,000 Ks
+        </div>
       </div>
-      <div className="h-[145px] w-full p-[5px] sm:h-[180px] lg:h-[220px] lg:p-[10px]">
-        <div className="h-full w-full rounded-[5px] bg-gray md:rounded-[20px]"></div>
+      <div className="relative h-[145px] w-full max-w-[306px] p-[5px] sm:h-[180px] lg:h-[220px] lg:p-[10px]">
+        <div className="h-full w-full rounded-[5px] bg-gray transition-all hover:shadow-shadow2 md:rounded-[5px]"></div>
+        <div className="absolute top-[15px] right-[15px] rounded-[50px] border-[1px] border-solid border-black bg-white py-[2px] px-[15px] text-[10px] md:text-xs">
+          10,000 Ks
+        </div>
       </div>
+      {/* price annotation */}
     </div>
   );
 };

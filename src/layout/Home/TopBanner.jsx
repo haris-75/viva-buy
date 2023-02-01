@@ -30,7 +30,7 @@ export default function TopBanner(props) {
           </div>
         </Carousel>
       </div>
-      <div className="hidden lg:block">
+      {/*<div className="hidden lg:block">
         <div className="flex h-[360px] w-[360px] items-center justify-center rounded-[20px] border-[1px] bg-white p-5 text-center xl:h-[400px] xl:w-[400px]">
           <div>
             <p className="font-sans text-[22px] font-bold leading-10 text-black xl:text-[28px]">
@@ -48,6 +48,7 @@ export default function TopBanner(props) {
           </div>
         </div>
       </div>
+  */}
     </div>
   );
 }

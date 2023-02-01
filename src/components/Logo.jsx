@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Logo(props) {
   return (
-    <p className="font-sans text-3xl font-bold text-primary lg:text-5xl">
+    <p className="h-max font-sans text-sm font-bold text-black lg:text-2xl">
       LOGO
     </p>
   );
