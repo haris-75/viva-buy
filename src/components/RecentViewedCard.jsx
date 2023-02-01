@@ -25,7 +25,7 @@ export default function RecentViewedCard(props) {
           </p>
         </div>
         <div>
-          <p className="font-sans text-xs leading-5 text-black md:text-sm md:leading-7">
+          <p className="font-sans text-sm leading-5 text-black md:text-sm md:leading-7">
             Shop name
           </p>
         </div>

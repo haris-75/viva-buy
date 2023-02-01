@@ -59,7 +59,7 @@ export default function FeaturedProductCard(props) {
           </div>
         </div>
         <div className="mt-[5px]">
-          <p className="font-sans text-xs font-light leading-5 text-black md:leading-7 lg:text-sm">
+          <p className="font-sans text-sm font-light leading-5 text-black md:leading-7 lg:text-sm">
             Shop name
           </p>
         </div>

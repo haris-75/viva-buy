@@ -65,7 +65,7 @@ export default function RegisterModal(props) {
               }
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-5 flex justify-center">
             <Btn1>Register</Btn1>
           </div>
           <div className="mt-[10px] text-center">

@@ -89,7 +89,7 @@ export default function SignInModal(props) {
               Register now
             </span>
           </div>
-          <div className="mt-5">
+          <div className="mt-5 flex justify-center">
             <p className="text-center font-sans text-xs leading-5 text-[#757575]">
               By signing in, you agree to our Terms of Use and Privacy Policy.
             </p>

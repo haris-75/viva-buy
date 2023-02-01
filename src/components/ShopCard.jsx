@@ -15,11 +15,11 @@ export default function ShopCard(props) {
           />
         </div>
         <div className="mt-[5px] lg:mt-[20px]">
-          <p className="text-center font-sans text-xs font-light leading-4 text-black line-clamp-1 group-hover/item:font-bold md:text-base lg:leading-4">
+          <p className="text-center font-sans text-sm font-light leading-4 text-black line-clamp-1 group-hover/item:font-bold md:text-base lg:leading-4">
             shop name
           </p>
 
-          <p className="text-center font-sans text-xs font-light leading-4 text-black line-clamp-1 group-hover/item:font-bold md:text-base  lg:leading-4">
+          <p className="text-center font-sans text-sm font-light leading-4 text-black line-clamp-1 group-hover/item:font-bold md:text-base  lg:leading-4">
             lorem ipsum dolor sit amet
           </p>
         </div>
