@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
-import Logo from "../../components/Logo";
-import TopNavbar from "../TopNavbar";
-import MobileMenubar from "../MobileMenubar";
+import Logo from '../Logo';
+import TopNavbar from '../TopNavbar';
+import MobileMenubar from '../MobileMenubar';
 
-import { ToteIcon, UserIcon, MenuIcon } from "../../components/Svgs";
+import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svgs';
 
 export default function Header(props) {
   const [mobileMenu, setMobileMenu] = useState(false);
   const isLaptop = useMediaQuery({
-    query: "(max-width: 1024px)",
+    query: '(max-width: 1024px)'
   });
 
   return (
@@ -53,10 +53,7 @@ export default function Header(props) {
       {/* toggle the menubar for both mobiles and desktop*/}
       {isLaptop ? (
         <div className="mt-5 flex h-[40px] flex-row items-center justify-between">
-          <div
-            className="h-[32px] w-[32px] cursor-pointer"
-            onClick={() => setMobileMenu(true)}
-          >
+          <div className="h-[32px] w-[32px] cursor-pointer" onClick={() => setMobileMenu(true)}>
             <MenuIcon />
           </div>
 

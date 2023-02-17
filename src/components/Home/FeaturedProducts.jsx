@@ -1,6 +1,6 @@
-import React from "react";
-import { H2 } from "../../components/typography";
-import FeaturedProductCard from "../../components/FeaturedProductCard";
+import React from 'react';
+import { H2 } from '../../common/typography';
+import FeaturedProductCard from '../../Components/FeaturedProductCard';
 
 {
   /* featured products list */
@@ -12,20 +12,15 @@ export default function FeaturedProducts() {
         <H2>
           <span>Featured products </span>
           <span className="font-sans font-light text-black">
-            {" "}
+            {' '}
             - sponsored by marketplace sellers
           </span>
         </H2>
       </div>
       <div className="-mt-[5px] -ml-[5px] flex flex-row flex-wrap lg:-mt-[10px] lg:-ml-[10px]">
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
-        <FeaturedProductCard />
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((ele) => (
+          <FeaturedProductCard key={ele} />
+        ))}
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
-import { KeyboardDownIcon } from "../../components/Svgs";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
+import { KeyboardDownIcon } from '../../Components/Svgs';
 export default function MobileMenu(props) {
   const isMobile = useMediaQuery({
-    query: "(max-width: 1024px)",
+    query: '(max-width: 1024px)'
   });
   return isMobile && props.open ? (
     <div className="fixed top-0 bottom-0 left-0 z-10 h-full w-full bg-transparent">
@@ -37,10 +37,7 @@ export default function MobileMenu(props) {
 
 function WrapperLink(props) {
   return (
-    <Link
-      href={props.href}
-      className="font-sans text-sm font-medium leading-6 text-black"
-    >
+    <Link href={props.href} className="font-sans text-sm font-medium leading-6 text-black">
       {props.children}
     </Link>
   );
@@ -55,11 +52,11 @@ function SellOnMarket(props) {
         onClick={() => setExpandBlock(!expandBlock)}
       >
         <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">
-          Sell on Marketplace{" "}
+          Sell on Marketplace{' '}
         </h3>
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon fill="black" />
@@ -96,13 +93,11 @@ function OurPolicies(props) {
         className="flex cursor-pointer flex-row flex-nowrap items-center justify-between "
         onClick={() => setExpandBlock(!expandBlock)}
       >
-        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">
-          Our policies
-        </h3>
+        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">Our policies</h3>
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon fill="black" />
@@ -136,13 +131,11 @@ function About(props) {
         className="flex cursor-pointer flex-row flex-nowrap items-center justify-between "
         onClick={() => setExpandBlock(!expandBlock)}
       >
-        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">
-          About
-        </h3>
+        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">About</h3>
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center  ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon fill="black" />
@@ -176,13 +169,11 @@ function ContactUs(props) {
         className="flex cursor-pointer flex-row flex-nowrap items-center justify-between "
         onClick={() => setExpandBlock(!expandBlock)}
       >
-        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">
-          Contact us
-        </h3>
+        <h3 className="w-max font-sans text-lg font-bold leading-6 text-black ">Contact us</h3>
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon fill="balck" />

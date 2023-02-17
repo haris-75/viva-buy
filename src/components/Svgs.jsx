@@ -19,13 +19,7 @@ export const ToteIcon = () => {
 
 export const UserIcon = () => {
   return (
-    <svg
-      width="46"
-      height="46"
-      viewBox="0 0 46 46"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -64,14 +58,10 @@ export const KeyboardDownIcon = (props) => {
       width="100%"
       height="auto"
       viewBox="0 0 13 8"
-      fill={props.fill ? props.fill : "none"}
+      fill={props.fill ? props.fill : 'none'}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M0.999023 1.00037L6.49903 6.00037L11.999 1.00037"
-        stroke="white"
-        stroke-width="2"
-      />
+      <path d="M0.999023 1.00037L6.49903 6.00037L11.999 1.00037" stroke="white" stroke-width="2" />
     </svg>
   );
 };
@@ -135,13 +125,7 @@ export const GlobalIcon = () => {
 
 export const HeartOutlinedIcon = (props) => {
   return (
-    <svg
-      width="20"
-      height="18"
-      viewBox="0 0 20 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -155,13 +139,7 @@ export const HeartOutlinedIcon = (props) => {
 
 export const HeartFilledIcon = (props) => {
   return (
-    <svg
-      width="20"
-      height="18"
-      viewBox="0 0 20 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
@@ -173,13 +151,7 @@ export const HeartFilledIcon = (props) => {
 };
 
 export const close = (
-  <svg
-    width="23"
-    height="23"
-    viewBox="0 0 23 23"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

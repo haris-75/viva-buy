@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Logo from "../../components/Logo";
-import { useMediaQuery } from "react-responsive";
-import {
-  FacebookIcon,
-  GlobalIcon,
-  KeyboardDownIcon,
-  InstagramIcon,
-} from "../../components/Svgs";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Logo from '../Logo';
+import { FacebookIcon, GlobalIcon, KeyboardDownIcon, InstagramIcon } from '../../Components/Svgs';
 export default function Footer(props) {
   return (
     <div className="mt-5 w-full bg-black sm:mt-20">
@@ -40,9 +34,7 @@ export default function Footer(props) {
                 <p className="w-[20px] md:w-[18px]">
                   <GlobalIcon />
                 </p>
-                <p className="font-sans text-base font-medium text-black md:text-sm">
-                  English
-                </p>
+                <p className="font-sans text-base font-medium text-black md:text-sm">English</p>
               </div>
               <div className="flex cursor-pointer flex-row items-center gap-3 rounded-[50px] py-[5px] px-[10px] transition-all duration-200 hover:bg-hoverColor">
                 <p className="font-sans text-base font-medium text-black md:text-sm ">
@@ -67,11 +59,11 @@ function SellOnMarket(props) {
         onClick={() => setExpandBlock(!expandBlock)}
       >
         <h3 className="w-max font-sans text-base font-bold leading-6 text-white md:text-lg lg:leading-8">
-          Sell on Marketplace{" "}
+          Sell on Marketplace{' '}
         </h3>
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center sm:hidden ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon />
@@ -130,7 +122,7 @@ function OurPolicies(props) {
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center sm:hidden ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon />
@@ -183,7 +175,7 @@ function About(props) {
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center sm:hidden ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon />
@@ -237,7 +229,7 @@ function ContactUs(props) {
 
         <span
           className={`flex h-[20px] w-[20px] items-center justify-center sm:hidden ${
-            expandBlock ? "rotate-180" : ""
+            expandBlock ? 'rotate-180' : ''
           }`}
         >
           <KeyboardDownIcon />

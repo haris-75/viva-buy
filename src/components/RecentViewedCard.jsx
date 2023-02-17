@@ -1,11 +1,17 @@
-import React from "react";
+import { useRouter } from 'next/router';
+import React from 'react';
+import { navigateToPage } from '../utils/navigation';
 
 {
-  /* Recent view card */
+  /* Recent view card  */
 }
 export default function RecentViewedCard(props) {
+  const router = useRouter();
   return (
-    <div className="flex w-1/4 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6">
+    <div
+      onClick={() => navigateToPage(router, 'shop')}
+      className="flex w-1/4 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
+    >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px]">
         <div className="overflow-hidden rounded-[5px] bg-gray lg:rounded-[5px]">
           <img

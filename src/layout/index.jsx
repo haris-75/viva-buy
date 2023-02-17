@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-import RegisterModal from "../../components/modals/RegisterModal";
-import SignInModal from "../../components/modals/SignInModal";
+import React, { useState } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import RegisterModal from '../common/Modals/RegisterModal';
+import SignInModal from '../common/Modals/SignInModal';
 
 export default function WebApp(props) {
   const [registerModal, setRegisterModal] = useState(false);
