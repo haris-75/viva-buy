@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
-import { KeyboardDownIcon } from '../../Components/Svgs';
+import { KeyboardDownIcon } from '../../Components/Svg';
 export default function MobileMenu(props) {
   const isMobile = useMediaQuery({
     query: '(max-width: 1024px)'

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import { navigateToPage } from '../utils/navigation';
+import { navigateToPage } from '../../../utils/navigation';
 
 {
   /* Recent view card  */

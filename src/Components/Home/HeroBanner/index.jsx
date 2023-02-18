@@ -1,12 +1,12 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import React from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 {
   /* banner that contains the carousel */
 }
 
-export default function TopBanner(props) {
+export default function HeroBanner(props) {
   return (
     <div className="flex flex-row gap-5">
       <div className="w-full rounded-[5px] lg:rounded-[20px]">

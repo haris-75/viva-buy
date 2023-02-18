@@ -4,7 +4,7 @@ import Footer from './Footer';
 import RegisterModal from '../common/Modals/RegisterModal';
 import SignInModal from '../common/Modals/SignInModal';
 
-export default function WebApp(props) {
+export default function WebApp({ children }) {
   const [registerModal, setRegisterModal] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
 
@@ -21,7 +21,7 @@ export default function WebApp(props) {
     <div className="w-full ">
       <div className="mx-auto box-content max-w-page-mx px-4 md:px-14 ">
         <Header setRegisterModal={setRegisterModal} />
-        <main>{props.children}</main>
+        <main>{children}</main>
       </div>
 
       <Footer />

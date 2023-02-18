@@ -1,6 +1,6 @@
 import React from 'react';
-import { H2 } from '../../common/typography';
-import FeaturedProductCard from '../../Components/FeaturedProductCard';
+import { H2 } from '../../../common/typography';
+import FeaturedProductCard from './FeaturedProductCard';
 
 {
   /* featured products list */

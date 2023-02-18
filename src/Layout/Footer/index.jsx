@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Logo from '../Logo';
-import { FacebookIcon, GlobalIcon, KeyboardDownIcon, InstagramIcon } from '../../Components/Svgs';
+import { FacebookIcon, GlobalIcon, KeyboardDownIcon, InstagramIcon } from '../../Components/Svg';
 export default function Footer(props) {
   return (
     <div className="mt-5 w-full bg-black sm:mt-20">

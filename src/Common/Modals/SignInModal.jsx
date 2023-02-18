@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { close } from '../../Components/Svgs';
+import { close } from '../../Components/Svg';
 import { InputLabel, InputField, InputCheckbox } from '../Inputs';
 import { Btn1 } from '../Buttons';
 

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import Logo from '../Logo';
 import TopNavbar from '../TopNavbar';
 import MobileMenubar from '../MobileMenubar';
 
-import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svgs';
+import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svg';
 
 export default function Header(props) {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -61,7 +61,6 @@ export default function Header(props) {
           <div className="ml-5 h-full w-full max-w-[400px]">
             <input
               className="h-full w-full rounded-full border-0 bg-[#E8E7E7] px-9 font-sans text-xs text-[#757575] outline-0 "
-              w-full
               placeholder="What are you looking for?"
             />
           </div>

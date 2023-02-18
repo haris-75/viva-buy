@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import DeliveryIcon from '../assets/icons/delivery-icon.svg';
-import GiftIcon from '../assets/icons/gift-icon.svg';
-import { navigateToPage } from '../utils/navigation';
-import { HeartOutlinedIcon, HeartFilledIcon } from './Svgs';
+import DeliveryIcon from '../../../assets/icons/delivery-icon.svg';
+import GiftIcon from '../../../assets/icons/gift-icon.svg';
+import { navigateToPage } from '../../../utils/navigation';
+import { HeartOutlinedIcon, HeartFilledIcon } from '../../Svg';
 import { useRouter } from 'next/router';
 
 {

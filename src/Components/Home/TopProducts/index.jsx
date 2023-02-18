@@ -1,8 +1,8 @@
 import React from 'react';
-import { H2 } from '../../common/typography';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
-import { navigateToPage } from '../../utils/navigation';
+import { navigateToPage } from '../../../utils/navigation';
+import { H2 } from '../../../common/typography';
 
 export function TopProducts(props) {
   const isMobile = useMediaQuery({

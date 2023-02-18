@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import Rating from '../assets/img/rating.svg';
-import { navigateToPage } from '../utils/navigation';
+import { navigateToPage } from '../../../utils/navigation';
+import Rating from '../../../assets/img/rating.svg';
 
 {
   /* shop card */
