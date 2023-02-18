@@ -1,6 +1,6 @@
 import React from 'react';
 import RecentViewedCard from './RecentViewedCard';
-import { H2 } from '../../../Common/typography';
+import { H2 } from '../../../Common/Typographys';
 import { useMediaQuery } from 'react-responsive';
 {
   /*  recently viewed list */

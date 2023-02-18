@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2 } from '../../../common/typography';
+import { H2 } from '../../../common/Typographys';
 import CategoryProductsCard from './CategoryProductsCard';
 import { useMediaQuery } from 'react-responsive';
 
