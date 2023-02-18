@@ -48,14 +48,14 @@ export default function FeaturedProductCard(props) {
           </p>
         </div>
         <div className="mt-[5px] flex flex-col gap-[5px] md:flex-row">
-          <div className="flex w-max flex-row gap-1 rounded-[45px] bg-[#FFD076] px-[10px] py-[3px]">
+          <div className="flex w-max flex-row gap-1 rounded-[45px] bg-success px-[10px] py-[3px]">
             <span className="h-[16px] w-[16px]">
               <img src={DeliveryIcon['src']} alt="" className="h-full w-full" />
             </span>
             <span className="text-[10px] sm:text-xs">Free delivery</span>
           </div>
 
-          <div className="flex w-max flex-row gap-1 rounded-[45px] bg-[#FF71F9] px-[10px] py-[3px]">
+          <div className="flex w-max flex-row gap-1 rounded-[45px] bg-warning px-[10px] py-[3px]">
             <span className="h-[16px] w-[16px]">
               <img src={GiftIcon['src']} alt="" className="h-full w-full" />
             </span>

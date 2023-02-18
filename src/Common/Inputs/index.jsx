@@ -66,3 +66,32 @@ export function InputRadio({ label, name, value, checked, onClick }) {
     </div>
   );
 }
+
+export function InputDropDown({ show, toggleDropDown, labelText, id }) {
+  return (
+    <>
+      <label>{labelText}</label>
+      <div
+        className="w-full cursor-pointer bg-white text-black border border-black flex  justify-between	p-2.5 rounded-md font-medium "
+        onClick={toggleDropDown}
+      >
+        <span>Select a variant</span>
+        <img src="/assets/dropdown.svg" />
+      </div>
+
+      <div
+        className={`${
+          show ? '' : 'hidden'
+        } z-10 bg-white border border-black  rounded-md shadow w-full `}
+      >
+        <ul className="p-2.5">
+          {[1, 2, 3, 4].map((ele) => (
+            <li key={ele + id} className="my-2.5 px-2.5   rounded-md hover:bg-gray">
+              <span>Variant {ele}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}

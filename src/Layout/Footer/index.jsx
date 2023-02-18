@@ -11,7 +11,7 @@ export default function Footer(props) {
         <About />
         <ContactUs />
       </div>
-      <div className="flex h-auto w-full items-center bg-secondary py-6 px-8 md:py-10 md:px-14 lg:h-[100px]">
+      <div className="flex h-auto w-full items-center bg-primary py-6 px-8 md:py-10 md:px-14 lg:h-[100px]">
         <div className="mx-auto flex w-full max-w-page-mx flex-col items-center justify-between gap-3 md:flex-row">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
             <Logo />

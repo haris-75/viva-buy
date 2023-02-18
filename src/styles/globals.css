@@ -2,5 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-.vertical-carousel {
+.image-gallery-image {
+  width: 620px !important;
+  border-radius: 1%;
+}
+.image-gallery-slide,
+.image-gallery-slides {
+  border-radius: 1% !important;
+}
+.image-gallery-swipe {
+  padding-left: 20px;
+}
+.image-gallery-icon {
+  background: #fff !important;
+  color: black !important;
+  font-weight: bold !important;
+  border-radius: 50% !important;
+  padding: 5px 10px !important;
+  border: 1px solid #000000 !important;
+  filter: none !important;
+}
+.image-gallery-icon > svg {
+  width: 12px !important;
+  height: auto !important;
+}
+.image-gallery-left-nav {
+  left: 20px !important;
+  margin-left: 10px;
+}
+.image-gallery-right-nav {
+  margin-right: 10px;
+}
+.image-gallery-slide-wrapper {
+  width: auto !important;
+}
+.image-gallery-thumbnail:hover,
+.image-gallery-thumbnail:focus,
+.active {
+  outline: none;
+  border: none !important;
+  border-radius: 5%;
+}
+.active > .image-gallery-thumbnail-inner > .image-gallery-thumbnail-image,
+.image-gallery-thumbnail-image:hover,
+.image-gallery-thumbnail-image:focus {
+  border: 4px solid black !important;
+  border-radius: 5% !important;
 }

@@ -5,9 +5,10 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
-      './src/Components/**/*.{js,ts,jsx,tsx}',
-      './src/layout/**/*.{js,ts,jsx,tsx}',
-      './src/views/**/*.{js,ts,jsx,tsx}',
+      // './src/Components/**/*.{js,ts,jsx,tsx}',
+      './src/Components/**/**/*.{js,ts,jsx,tsx}',
+      './src/Common/**/*.{js,ts,jsx,tsx}',
+      './src/Layout/**/*.{js,ts,jsx,tsx}',
       './src/pages/**/*.{js,ts,jsx,tsx}'
     ],
     options: {
@@ -32,24 +33,28 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      primary: '#02DFB7',
-      secondary: '#FAE053',
-      gray: '#D9D9D9',
-      hoverColor: '#E8E7E7',
-      transparent: 'transparent',
-      current: 'currentColor',
+      primary: '#F5D420',
+      secondary: '#B276FF',
+      gray: '#E8E7E7',
       white: '#ffffff',
-      black: '#000000'
+      'white-secondary': '#f1f1f1',
+      black: '#000000',
+      success: '#FFD076',
+      danger: '#BF0000',
+      warning: 'rgba(255, 113, 249, 0.46)',
+      hoverColor: '#dadada',
+      disabled: '#757575'
     },
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'sans-serif']
+        sans: ['Outfit']
       },
       minHeight: {
         'screen-75': '75vh'
       },
       fontSize: {
-        xl44: '40px'
+        xl44: '40px',
+        xxs: '10px'
       },
       opacity: {
         80: '.8'

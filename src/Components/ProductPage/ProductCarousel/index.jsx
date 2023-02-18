@@ -1,31 +1,49 @@
 import React from 'react';
-
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 export default function ProductCarousel() {
+  const properties = {
+    thumbnailPosition: 'left',
+    useBrowserFullscreen: false,
+    showFullscreenButton: false,
+    showPlayButton: false,
+    items: [
+      {
+        original: '/assets/featured/original/1.png',
+        thumbnail: '/assets/featured/thumbnail/1.png'
+      },
+      {
+        original: '/assets/featured/original/2.png',
+        thumbnail: '/assets/featured/thumbnail/2.png'
+      },
+      {
+        original: '/assets/featured/original/3.png',
+        thumbnail: '/assets/featured/thumbnail/3.png'
+      },
+      {
+        original: '/assets/featured/original/4.png',
+        thumbnail: '/assets/featured/thumbnail/4.png'
+      },
+      {
+        original: '/assets/featured/original/5.png',
+        thumbnail: '/assets/featured/thumbnail/5.png'
+      },
+      {
+        original: '/assets/featured/original/6.png',
+        thumbnail: '/assets/featured/thumbnail/6.png'
+      },
+      {
+        original: '/assets/featured/original/7.png',
+        thumbnail: '/assets/featured/thumbnail/7.png'
+      },
+      { original: '/assets/featured/original/8.png', thumbnail: '/assets/featured/thumbnail/8.png' }
+    ]
+  };
   return (
     <div className="flex flex-row gap-5">
       <div className="w-full rounded-[5px] lg:rounded-[20px]">
-        <CarouselProvider
-          //   naturalSlideWidth={100}
-          //   naturalSlideHeight={125}
-          totalSlides={5}
-          visibleSlides={1}
-        >
-          <Slider>
-            {[1, 2, 3, 4, 5]?.map((ele) => (
-              <Slide index={ele} key={ele}>
-                <div>
-                  <img src={`/assets/featured/${ele}.png`} />
-                  <p className="legend">Legend 1</p>
-                </div>
-              </Slide>
-            ))}
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
+        <ImageGallery {...properties} />
       </div>
     </div>
   );
