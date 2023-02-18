@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2 } from '../../../common/Typographys';
+import { H2 } from '../../../Common/Typography';
 import ShopCard from './ShopCard';
 import { useMediaQuery } from 'react-responsive';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
 import { navigateToPage } from '../../../utils/navigation';
-import { H2 } from '../../../common/Typographys';
+import { H2 } from '../../../Common/Typography';
 
 export function TopProducts(props) {
   const isMobile = useMediaQuery({

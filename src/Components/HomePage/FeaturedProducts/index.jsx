@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2 } from '../../../common/Typographys';
+import { H2 } from '../../../Common/Typography';
 import FeaturedProductCard from './FeaturedProductCard';
 
 {
