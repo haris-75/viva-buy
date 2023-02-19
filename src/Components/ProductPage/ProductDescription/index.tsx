@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Btn1, Btn2, RoundSvgButton } from '../../../Common/Buttons';
 import { InputCheckbox, InputDropDown } from '../../../Common/Inputs';
+import ProductInfoDropDown from '../ProductInfoDropDown';
 import QuantityButton from '../QuantityButton';
 import ShopInfo from '../ShopInfo';
 
@@ -8,6 +9,9 @@ export default function ProductDescription() {
   const [showDropDown1, setShowDropDown1] = useState(false);
   const [showDropDown2, setShowDropDown2] = useState(false);
   const [giftWrapChecked, setGiftWrapChecked] = useState(false);
+  const [showProductDescription, setShowProductDescription] = useState(false);
+  const [showDeliveryInfo, setShowDeliveryInfo] = useState(false);
+  const [showShopPolicy, setShowShopPolicy] = useState(false);
   return (
     <div>
       <div>
@@ -49,6 +53,44 @@ export default function ProductDescription() {
         </RoundSvgButton>
       </div>
       <ShopInfo />
+      <ProductInfoDropDown
+        label="Product Description"
+        textArray={[
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+          'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim,',
+          'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+          'consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
+          'dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non ',
+          'proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        ]}
+        show={showProductDescription}
+        toggle={() => setShowProductDescription(!showProductDescription)}
+        delivery={false}
+        subList={true}
+      />
+      <ProductInfoDropDown
+        label="Delivery Information"
+        textArray={[
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+          'tempor incididunt ut labore et dolore magna aliqua. '
+        ]}
+        show={showDeliveryInfo}
+        toggle={() => setShowDeliveryInfo(!showDeliveryInfo)}
+        delivery={true}
+        subList={false}
+      />
+      <ProductInfoDropDown
+        label="Shop Policy"
+        textArray={[
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+          'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim,',
+          'quis nostrud exercitation. '
+        ]}
+        show={showShopPolicy}
+        toggle={() => setShowShopPolicy(!showShopPolicy)}
+        delivery={false}
+        subList={false}
+      />
     </div>
   );
 }
