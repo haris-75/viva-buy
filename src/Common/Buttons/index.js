@@ -50,10 +50,8 @@ export function RoundSvgButton({ children, className, onClick, disabled }) {
   return (
     <button
       className={`${
-        className
-          ? className
-          : 'flex flex-nowrap items-center justify-center gap-4 rounded-full border-[1px] border-solid border-black bg-white p-3 text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:bg-hoverColor   md:text-xl hover:shadow-shadow1'
-      }`}
+        className ? className : 'p-3 text-base md:text-xl'
+      } flex flex-nowrap items-center justify-center gap-4 rounded-full border-[1px] border-solid border-black bg-white   text-center font-sans  font-bold leading-6 text-black transition-all duration-200 hover:bg-hoverColor    hover:shadow-shadow1`}
       onClick={onClick}
     >
       {children}

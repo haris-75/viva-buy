@@ -9,7 +9,10 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
           className="flex  justify-between hover:bg-gray rounded-full py-2.5 px-5"
         >
           <h1 className=" w-full font-black">{label}</h1>
-          <img className="cursor-pointer" src="/assets/dropdown2.svg" />
+          <img
+            className={`cursor-pointer  ${show ? 'rotate-180' : ''}`}
+            src="/assets/dropdown2.svg"
+          />
         </div>
       </div>
       <div className={`py-2.5 pl-5 pr-2.5 text-[13px]  text-left ${show ? '' : 'hidden'}`}>

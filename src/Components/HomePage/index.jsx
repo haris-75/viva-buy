@@ -14,7 +14,7 @@ export default function Home() {
       <ShopsList size="100%" />
       <FeaturedProducts />
       <CategoryProducts />
-      <RecentlyViewed />
+      <RecentlyViewed label="Recently Viewed" description="based on your activity" />
     </div>
   );
 }

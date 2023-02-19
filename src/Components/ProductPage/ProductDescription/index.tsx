@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Btn1, Btn2, RoundSvgButton } from '../../../Common/Buttons';
 import { InputCheckbox, InputDropDown } from '../../../Common/Inputs';
-import ProductInfoDropDown from '../ProductInfoDropDown';
-import QuantityButton from '../QuantityButton';
-import ShopInfo from '../ShopInfo';
+import ProductInfoDropDown from './ProductInfoDropDown';
+import QuantityButton from './QuantityButton';
+import ShopInfo from './ShopInfo';
 
 export default function ProductDescription() {
   const [showDropDown1, setShowDropDown1] = useState(false);
