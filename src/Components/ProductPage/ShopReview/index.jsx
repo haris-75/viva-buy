@@ -9,7 +9,7 @@ export default function ShopReview() {
 
   return (
     <div>
-      <div className="flex justify-between">
+      <div className="flex justify-between my-8">
         <h1>Shop reviews</h1>
         <RatingDropDown
           value={ratingValue}
@@ -18,7 +18,7 @@ export default function ShopReview() {
           show={showRating}
         />
       </div>
-      <div>
+      <div className="flex  flex-col gap-8">
         <UserReview review={[]} />
         <UserReview review={[1, 2, 3, 4]} />
         <UserReview review={[1]} />

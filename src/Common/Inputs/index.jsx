@@ -22,7 +22,7 @@ export function InputLabel(props) {
   );
 }
 
-export function InputCheckbox({ label, name, value, checked, onClick }) {
+export function InputCheckbox({ label, name, value, checked, onClick, onChange }) {
   return (
     <div className="relative flex h-[20px] items-center pl-[55px]">
       <input
@@ -31,6 +31,7 @@ export function InputCheckbox({ label, name, value, checked, onClick }) {
         name={name ? name : ''}
         value={value ? value : ''}
         checked={checked ? checked : false}
+        onChange={onChange}
         onClick={onClick}
       />
       <label

@@ -57,12 +57,12 @@ export const KeyboardDownIcon = (props) => {
   return (
     <svg
       width="100%"
-      height="auto"
+      height="100%"
       viewBox="0 0 13 8"
       fill={props.fill ? props.fill : 'none'}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M0.999023 1.00037L6.49903 6.00037L11.999 1.00037" stroke="white" stroke-width="2" />
+      <path d="M0.999023 1.00037L6.49903 6.00037L11.999 1.00037" stroke="white" strokeWidth="2" />
     </svg>
   );
 };

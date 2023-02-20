@@ -13,7 +13,7 @@ export default function ProductDescription() {
   const [showDeliveryInfo, setShowDeliveryInfo] = useState(false);
   const [showShopPolicy, setShowShopPolicy] = useState(false);
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <div>
         <div className="font-thin text-2xl">
           <p>Product name lorem ipsum dolor sit amet</p>
@@ -40,14 +40,17 @@ export default function ProductDescription() {
         <InputCheckbox
           checked={giftWrapChecked}
           onClick={() => setGiftWrapChecked(!giftWrapChecked)}
+          onChange={() => {}}
         />
         <h1 className="font-bold">Gift wrap for</h1>&nbsp; <span>1,500Ks</span>
       </div>
       <div className="flex">
         <Btn1>Add to cart</Btn1>
-        <RoundSvgButton>
+
+        <RoundSvgButton className="p-3 text-base md:text-xl mx-2.5">
           <img src="/assets/cart/heart.svg" />
         </RoundSvgButton>
+
         <RoundSvgButton>
           <img src="/assets/cart/share.svg" />
         </RoundSvgButton>

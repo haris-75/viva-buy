@@ -8,8 +8,9 @@ export default function ProductPage() {
   return (
     <div>
       <div className="w-full flex gap-8">
-        <div className="grid grid-rows-2">
+        <div className="flex flex-col">
           <ProductCarousel />
+          {/* <ProductDescription /> */}
           <ShopReview />
         </div>
         <div>

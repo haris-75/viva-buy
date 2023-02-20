@@ -3,7 +3,7 @@ import Rating from '../../../../assets/img/rating.svg';
 
 export default function UserReview({ review }) {
   return (
-    <div>
+    <div className="flex flex-col gap-2.5">
       <div className="flex text-sm gap-2 items-center">
         <div>
           <img src="/assets/user-ellipse.png" width={40} />
@@ -17,12 +17,16 @@ export default function UserReview({ review }) {
         <span className="text-disabled">Product name lorem ispusm</span>
       </div>
       <div>
-        <img src={Rating['src']} className=" w-full group-hover/item:flex md:w-[80px]" />
+        <img src={Rating['src']} className="group-hover/item:flex md:w-[80px]" />
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      </p>
-      <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut
+        </p>
+        <p>labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+      </div>
+
       {review?.length > 0 ? (
         <div className="flex gap-1">
           {review.map((ele) => (

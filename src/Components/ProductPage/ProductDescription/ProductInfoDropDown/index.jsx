@@ -17,18 +17,22 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
       </div>
       <div className={`py-2.5 pl-5 pr-2.5 text-[13px]  text-left ${show ? '' : 'hidden'}`}>
         {delivery ? (
-          <div>
+          <div className="flex flex-col gap-2.5  mb-2.5">
             <div className="flex justify-between">
-              <div className="flex">
-                <img src="/assets/cart/delivery.svg" />
+              <div className="flex gap-2.5 items-center">
+                <div>
+                  <img src="/assets/cart/delivery.svg" />
+                </div>
                 <span className="font-black">Deliver to</span> &nbsp;&nbsp;
                 <span className="font-thin">Yangon, Yankin Township</span>
               </div>
               <div className="text-disabled font-xxs">Change</div>
             </div>
             <div className="flex justify-between">
-              <div className="flex">
-                <img src="/assets/cart/truck.svg" />
+              <div className="flex gap-2.5 items-center">
+                <div>
+                  <img src="/assets/cart/truck.svg" />
+                </div>
                 <span className="font-black">Standard Delivery</span> &nbsp;&nbsp;
                 <span className="font-thin">2-3 days</span>
               </div>
@@ -42,7 +46,7 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
           <p key={ele}>{ele}</p>
         ))}
         {subList ? (
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-2.5">
             <li>Lorem ipsum</li>
             <li>Lorem ipsum</li>
             <li>Lorem ipsum</li>
