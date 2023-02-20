@@ -8,8 +8,10 @@ export default function RatingDropDown({ value, setValue, toggle, show }) {
         onClick={toggle}
       >
         <h1 className="font-black">Sort by:</h1>
-        <span className="ml-1 mr-1 w-[125px]">{value}</span>
-        <img width={6} src="/assets/dropdown2.svg" />
+        <span className=" flex gap-0.5 w-[150px] items-center">
+          <span className="ml-1 mr-1 ">{value}</span>
+          <img width={6} src="/assets/dropdown2.svg" />
+        </span>
       </div>
       <div className="px-2.5   shadow-shadow1 mt-1 rounded-[5px] absolute  top-10 bg-white">
         {['Relevance', 'Recent', 'Rating: High to Low', 'Rating: Low to High'].map((ele) => (

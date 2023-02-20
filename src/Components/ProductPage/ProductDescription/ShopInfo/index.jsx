@@ -6,7 +6,7 @@ export default function ShopInfo() {
   return (
     <div className="flex flex-col gap-2.5">
       {/* top */}
-      <div className="flex gap-[18px]">
+      <div className="flex gap-[18px] justify-between">
         <div>
           <h1 className="text-xs">Sold by</h1>
           <p className="text-base font-thin">Shop name lorem ipsum dolor sit amet consectetur</p>
@@ -25,7 +25,7 @@ export default function ShopInfo() {
         </div>
       </div>
       {/* bottom */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 justify-between">
         <div className="flex w-full justify-center py-1.5 border border-black rounded-md items-center text-xs">
           <img src="/assets/cart/message.svg" className="mt-0.5 mr-1" />
           <span>Message Shop</span>

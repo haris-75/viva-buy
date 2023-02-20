@@ -44,16 +44,27 @@ export default function ProductDescription() {
         />
         <h1 className="font-bold">Gift wrap for</h1>&nbsp; <span>1,500Ks</span>
       </div>
-      <div className="flex">
+      <div className="flex  justify-between items-center gap-2.5">
         <Btn1>Add to cart</Btn1>
 
-        <RoundSvgButton className="p-3 text-base md:text-xl mx-2.5">
-          <img src="/assets/cart/heart.svg" />
-        </RoundSvgButton>
-
-        <RoundSvgButton>
-          <img src="/assets/cart/share.svg" />
-        </RoundSvgButton>
+        <div className="flex gap-2.5">
+          <div>
+            <RoundSvgButton className="p-3 text-base md:text-xl md:px-[8px] md:py-[9px]">
+              <img
+                src="/assets/cart/heart.svg"
+                className="md:w-[35px] sm:w-[25px] xs-m:w-[25px] xs:w-[40px]"
+              />
+            </RoundSvgButton>
+          </div>
+          <div>
+            <RoundSvgButton className="p-3 text-base md:text-xl md:p-[9px] ">
+              <img
+                src="/assets/cart/share.svg"
+                className="md:w-[34px] sm:w-[24px] xs-m:w-[24px] xs:w-[39px]"
+              />
+            </RoundSvgButton>
+          </div>
+        </div>
       </div>
       <ShopInfo />
       <ProductInfoDropDown

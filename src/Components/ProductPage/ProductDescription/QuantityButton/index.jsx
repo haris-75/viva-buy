@@ -8,7 +8,7 @@ export default function QuantityButton() {
       <div className="flex">
         <button
           className={`rounded-l-md px-4 py-2.5  bg-white-secondary ${
-            quantity < 1 ? 'pointer-event-none cursor-default' : 'hover:shadow-shadow1'
+            quantity < 1 ? 'pointer-events-none cursor-default' : 'hover:shadow-shadow1'
           }`}
           onClick={() => setQuantity((prevQuantity) => prevQuantity - 1)}
         >

@@ -10,7 +10,7 @@ import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svg';
 export default function Header(props) {
   const [mobileMenu, setMobileMenu] = useState(false);
   const isLaptop = useMediaQuery({
-    query: '(max-width: 1024px)'
+    query: '(max-width: 768px)'
   });
 
   return (

@@ -3,16 +3,16 @@ import { RoundSvgButton } from '../Buttons';
 
 export default function Pagination() {
   return (
-    <div className="flex gap-1">
-      <RoundSvgButton className="px-[5px]">
+    <div className="flex gap-1 justify-center">
+      <RoundSvgButton className="px-[4px]">
         <img src="/assets/dropdown2.svg" width={15} className="rotate-90" />
       </RoundSvgButton>
-      {[1, 2, 3, 4, 5, 61].map((ele) => (
+      {[1, 2, 3].map((ele) => (
         <RoundSvgButton className="px-[8px] text-xs w-[25px]" key={ele}>
           {ele}
         </RoundSvgButton>
       ))}
-      <RoundSvgButton className="px-[5px]">
+      <RoundSvgButton className="px-[4px]">
         <img src="/assets/dropdown2.svg" width={15} className="rotate-[270deg]" />
       </RoundSvgButton>
     </div>

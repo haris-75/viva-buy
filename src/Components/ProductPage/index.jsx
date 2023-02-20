@@ -1,21 +1,29 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import RecentlyViewed from '../HomePage/RecentlyViewed';
 import ProductCarousel from './ProductCarousel';
 import ProductDescription from './ProductDescription';
 import ShopReview from './ShopReview';
 
 export default function ProductPage() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)'
+  });
   return (
-    <div>
-      <div className="w-full flex gap-8">
-        <div className="flex flex-col">
+    <div className={`${isMobile ? 'mt-4' : ''}`}>
+      <div className="w-full flex gap-8 justify-center">
+        <div className="flex flex-col gap-10">
           <ProductCarousel />
-          {/* <ProductDescription /> */}
+          {isMobile ? <ProductDescription /> : ''}
           <ShopReview />
         </div>
-        <div>
-          <ProductDescription />
-        </div>
+        {isMobile ? (
+          ''
+        ) : (
+          <div>
+            <ProductDescription />
+          </div>
+        )}
       </div>
       <div>
         <RecentlyViewed label="More From This Shop" description="" />

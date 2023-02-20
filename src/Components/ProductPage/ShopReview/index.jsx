@@ -9,8 +9,8 @@ export default function ShopReview() {
 
   return (
     <div>
-      <div className="flex justify-between my-8">
-        <h1>Shop reviews</h1>
+      <div className="flex justify-between mb-10 border-gray border-b">
+        <h1 className="text-xl">Shop reviews</h1>
         <RatingDropDown
           value={ratingValue}
           setValue={(value) => setRatingValue(value)}
