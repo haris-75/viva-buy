@@ -1,5 +1,6 @@
 import React from 'react';
+import ShopPage from '../Components/ShopPage';
 
-export default function ShopPage() {
-  return <div>ShopPage</div>;
+export default function Shop() {
+  return <ShopPage />;
 }

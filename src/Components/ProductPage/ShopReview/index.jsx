@@ -3,7 +3,7 @@ import Pagination from '../../../Common/Pagination';
 import RatingDropDown from './RatingDropDown';
 import UserReview from './UserReview';
 
-export default function ShopReview() {
+export default function ShopReview({ singleLine }) {
   const [ratingValue, setRatingValue] = useState('Rating: High to Low');
   const [showRating, setShowRating] = useState(false);
 
@@ -19,10 +19,10 @@ export default function ShopReview() {
         />
       </div>
       <div className="flex  flex-col gap-8">
-        <UserReview review={[]} />
-        <UserReview review={[1, 2, 3, 4]} />
-        <UserReview review={[1]} />
-        <UserReview review={[]} />
+        <UserReview review={[]} singleLine />
+        <UserReview review={[1, 2, 3, 4]} singleLine />
+        <UserReview review={[1]} singleLine />
+        <UserReview review={[]} singleLine />
         <Pagination />
       </div>
     </div>

@@ -22,11 +22,12 @@ export default function Header(props) {
 
           {/* search area for large devices that are greater than 1024px*/}
           {isLaptop ? null : (
-            <div className="h-[40px] w-full">
+            <div className="h-[40px] w-full relative">
               <input
                 className="h-full w-full rounded-full border-0 bg-[#E8E7E7] px-6 font-sans text-base text-[#757575] outline-0 "
                 placeholder="What are you looking for?"
               />
+              <img className="absolute right-6 top-3.5" src="/assets/search-icon.svg" />
             </div>
           )}
         </div>
@@ -58,11 +59,12 @@ export default function Header(props) {
           </div>
 
           <MobileMenubar open={mobileMenu} close={() => setMobileMenu(false)} />
-          <div className="ml-5 h-full w-full max-w-[400px]">
+          <div className="ml-5 h-full w-full max-w-[400px] relative">
             <input
               className="h-full w-full rounded-full border-0 bg-[#E8E7E7] px-9 font-sans text-xs text-[#757575] outline-0 "
               placeholder="What are you looking for?"
             />
+            <img className="absolute right-6 top-3.5" src="/assets/search-icon.svg" />
           </div>
         </div>
       ) : (
