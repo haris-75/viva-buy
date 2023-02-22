@@ -8,7 +8,7 @@ export default function ShopPage() {
   return (
     <div>
       <ShopHeader />
-      <div className="grid grid-cols-4 gap-8 mt-10">
+      <div className="grid md-lg:grid-cols-4 md:grid-cols-6 xs:grid-cols-1  gap-8 mt-10">
         <SearchFilter />
         <ShopList />
       </div>

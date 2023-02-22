@@ -40,7 +40,7 @@ export default function SearchFilter() {
     }
   ];
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 md-lg:col-span-1 md:col-span-2 xs:col-span-1">
       <h1 className="text-base font-black">Filter by category</h1>
       <div className="h-[40px] w-full relative my-2">
         <input

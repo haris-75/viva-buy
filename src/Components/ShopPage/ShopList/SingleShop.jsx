@@ -10,11 +10,11 @@ export default function SingleShop(props) {
   return (
     <div
       onClick={() => navigateToPage(router, 'shop')}
-      className="flex w-1/6 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
+      className="flex w-1/6 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 xs:w-1/3 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
     >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px]">
         <div className="overflow-hidden rounded-[5px]  lg:rounded-[5px]">
-          <img src="/assets/shop-list-single.png" className="lg:w-full md:w-[150px]" />
+          <img src="/assets/shop-list-single.png" className="lg:w-full md:w-[150px] xs:w-[250px]" />
         </div>
         <div className="mt-[5px]">
           <p className="  font-sans text-sm leading-5 text-black line-clamp-1 md:text-base md:leading-4">

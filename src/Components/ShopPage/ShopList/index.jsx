@@ -7,7 +7,7 @@ export default function ShopList() {
   const [ratingValue, setRatingValue] = useState('Rating: High to Low');
   const [showRating, setShowRating] = useState(false);
   return (
-    <div className="col-span-3">
+    <div className="md-lg:col-span-3 md:col-span-4 xs:col-span-1">
       <div className="flex justify-end mb-10 ">
         <RatingDropDown
           value={ratingValue}
@@ -25,8 +25,8 @@ export default function ShopList() {
           <SingleShop />
           <SingleShop />
           <SingleShop />
-          <SingleShop />
-          <SingleShop />
+          {/* <SingleShop />
+          <SingleShop /> */}
         </div>
       ))}
     </div>
