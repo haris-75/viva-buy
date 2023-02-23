@@ -44,7 +44,7 @@ export default function Header(props) {
             <UserIcon />
           </div>
           <div className="h-full">
-            <button className="hidden h-full rounded-full border-2 border-solid border-black bg-transparent px-6 font-sans text-sm font-bold text-black transition-all duration-200 hover:border-secondary hover:bg-secondary hover:shadow-shadow1 sm:block lg:h-full xl:px-5 xl:text-base">
+            <button className="hidden h-full rounded-full border-2 border-solid border-black bg-transparent px-6 font-sans text-sm font-bold text-black transition-all duration-200 hover:border-primary hover:bg-primary hover:shadow-shadow1 sm:block lg:h-full xl:px-5 xl:text-base">
               Sell on marketplace
             </button>
           </div>

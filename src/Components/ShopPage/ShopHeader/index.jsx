@@ -1,17 +1,33 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Rating from '../../../assets/img/rating.svg';
 import { SmallBtn } from '../../../Common/Buttons';
 export default function ShopHeader() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)'
+  });
   return (
     <div className="flex flex-col gap-0">
       <img src="/assets/shop-cover.png" />
-      <div className="md:grid md-lg:grid-cols-4 md:grid-cols-6 xs:flex xs:flex-col bg-white-secondary ">
-        <div className="px-8 flex flex-col gap-2.5 xl:-translate-y-1/3 lg-xl:-translate-y-1/4  lg:-translate-y-1/4 md:-translate-y-[20%] sm:-translate-y-1/3 xs:-translate-y-1/4 md:col-span-2 md-lg:col-span-1   xs:items-center">
+      <div className="md:grid md-lg:grid-cols-4 md:grid-cols-6 xs:flex xs:flex-col bg-white-secondary xs:relative items-center">
+        {isMobile ? (
           <img
             src="/assets/shop-logo.png"
-            className=" -mb-2.5 md:w-full xs:w-[150px] sm:w-[220px]"
+            className=" -mb-2.5 md:w-full sm:w-[220px] xs:w-[150px] md:relative xs:absolute sm:-top-[20%] xs:-top-[7%]"
           />
-          <div className="flex mt-2.5">
+        ) : (
+          ''
+        )}
+        <div className="px-8 md:flex md:flex-col xs:flex xs:flex-col sm:grid sm:grid-cols-2 gap-2.5 xl:-translate-y-1/3 lg-xl:-translate-y-[40%] md-lg:-translate-y-[40%] md:-translate-y-[60%]  md:col-span-2 md-lg:col-span-1   xs:items-center xs:relative xs:mt-[90px] sm:mt-[120px] md:mt-0 ">
+          {isMobile ? (
+            ''
+          ) : (
+            <img
+              src="/assets/shop-logo.png"
+              className=" -mb-2.5 md:w-full xs:w-[150px] sm:w-[220px] "
+            />
+          )}
+          <div className="flex md:mt-2.5 sm:mt-0 xs:mt-2.5">
             <img src={Rating['src']} width={110} />
             <span className="text-disabled">{'(141)'}</span>
           </div>

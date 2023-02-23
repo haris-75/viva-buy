@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export default function SearchFilter() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)'
+  });
+  const [filterValue, setFilterValue] = useState('All(100)');
+  const [showFilterDropDown, setShowFilterDropDown] = useState(false);
   const fakeFilters = [
     {
       text: 'All items',
@@ -50,12 +56,45 @@ export default function SearchFilter() {
         <img className="absolute right-6 top-3.5" src="/assets/search-icon.svg" />
       </div>
 
-      {fakeFilters?.map(({ text, value }) => (
-        <div key={text + value} className="flex  justify-between">
-          <p>{text}</p>
-          <span>{value}</span>
+      {isMobile ? (
+        <div className="flex gap-2.5 relative">
+          <button
+            className=" flex justify-between items-center w-full rounded-full border-2 border-solid border-black bg-transparent px-5 py-2.5 font-sans text-sm font-thin text-black transition-all duration-200  hover:shadow-shadow1 "
+            onClick={() => setShowFilterDropDown(true)}
+          >
+            {filterValue}
+            <img src="/assets/dropdown.svg" />
+          </button>
+          <img
+            className="hover:bg-hoverColor px-2.5 rounded-full"
+            src="/assets/filter-icon.svg"
+            onClick={() => setShowFilterDropDown(true)}
+          />
+          <div className="px-2.5 w-full shadow-shadow1 mt-4  z-10 rounded-[5px] absolute  top-10 bg-white">
+            {[1, 2, 3, 4, 5, 6].map((ele) => (
+              <p
+                className={`text-sm hover:bg-gray cursor-pointer rounded-full px-2.5 py-1 my-2.5 ${
+                  showFilterDropDown ? '' : 'hidden'
+                }`}
+                key={ele}
+                onClick={() => {
+                  setFilterValue('Category lorem ipsum (12)');
+                  setShowFilterDropDown(false);
+                }}
+              >
+                {'Category lorem ipsum (12)'}
+              </p>
+            ))}
+          </div>
         </div>
-      ))}
+      ) : (
+        fakeFilters?.map(({ text, value }) => (
+          <div key={text + value} className="flex  justify-between">
+            <p>{text}</p>
+            <span>{value}</span>
+          </div>
+        ))
+      )}
     </div>
   );
 }

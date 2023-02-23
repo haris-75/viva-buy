@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import RatingDropDown from '../../ProductPage/ShopReview/RatingDropDown';
-import RecentViewedCard from '../../HomePage/RecentlyViewed/RecentViewedCard';
 import SingleShop from './SingleShop';
 
 export default function ShopList() {

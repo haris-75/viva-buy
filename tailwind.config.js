@@ -46,7 +46,7 @@ module.exports = {
       success: '#FFD076',
       danger: '#BF0000',
       warning: 'rgba(255, 113, 249, 0.46)',
-      hoverColor: '#dadada',
+      hoverColor: '#d9d9d9',
       disabled: '#757575'
     },
     extend: {

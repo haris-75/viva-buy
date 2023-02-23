@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { navigateToPage } from '../../../utils/navigation';
+import { HeartOutlinedIcon } from '../../Svg/index';
 
 {
   /* Recent view card  */
@@ -10,9 +11,12 @@ export default function SingleShop(props) {
   return (
     <div
       onClick={() => navigateToPage(router, 'shop')}
-      className="flex w-1/6 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 xs:w-1/3 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
+      className="flex  flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/4 xs:w-1/3 lg:rounded-[5px] lg:p-[10px] "
     >
-      <div className="cursor-pointer rounded-[5px] lg:rounded-[5px]">
+      <div className="cursor-pointer rounded-[5px] lg:rounded-[5px] relative group/item">
+        <div className="absolute border-2 rounded-full p-1 bg-white  right-2.5 top-2.5 hover:shadow-shadow1 hover:border-white group-hover/item:block hidden">
+          <HeartOutlinedIcon className="fill-black hover:fill-[#FF0000]" />
+        </div>
         <div className="overflow-hidden rounded-[5px]  lg:rounded-[5px]">
           <img src="/assets/shop-list-single.png" className="lg:w-full md:w-[150px] xs:w-[250px]" />
         </div>
