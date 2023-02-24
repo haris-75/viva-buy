@@ -6,8 +6,10 @@ import TopNavbar from '../TopNavbar';
 import MobileMenubar from '../MobileMenubar';
 
 import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svg';
+import { useRouter } from 'next/router';
 
 export default function Header(props) {
+  const router = useRouter();
   const [mobileMenu, setMobileMenu] = useState(false);
   const isLaptop = useMediaQuery({
     query: '(max-width: 768px)'
@@ -34,7 +36,10 @@ export default function Header(props) {
 
         {/* icons */}
         <div className="flex h-full flex-row items-center gap-0 sm:gap-5">
-          <div className="trnasition-all flex h-[30px] w-[30px] cursor-pointer items-center rounded-full p-[6px] duration-200 hover:bg-hoverColor hover:shadow-shadow1">
+          <div
+            className="trnasition-all flex h-[30px] w-[30px] cursor-pointer items-center rounded-full p-[6px] duration-200 hover:bg-hoverColor hover:shadow-shadow1"
+            onClick={() => navigateToPage(router, 'cart')}
+          >
             <ToteIcon />
           </div>
           <div

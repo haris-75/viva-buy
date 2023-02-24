@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Btn1, Btn2, RoundSvgButton } from '../../../Common/Buttons';
+import { Btn1, RoundSvgButton } from '../../../Common/Buttons';
 import { InputCheckbox, InputDropDown } from '../../../Common/Inputs';
 import ProductInfoDropDown from './ProductInfoDropDown';
 import QuantityButton from './QuantityButton';
@@ -45,7 +45,7 @@ export default function ProductDescription() {
         <h1 className="font-bold">Gift wrap for</h1>&nbsp; <span>1,500Ks</span>
       </div>
       <div className="flex  justify-between items-center gap-2.5">
-        <Btn1>Add to cart</Btn1>
+        <Btn1>Add to bag</Btn1>
 
         <div className="flex gap-2.5">
           <div>

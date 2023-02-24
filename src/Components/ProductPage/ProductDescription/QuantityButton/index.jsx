@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export default function QuantityButton() {
-  const [quantity, setQuantity] = useState(0);
+export default function QuantityButton({ initialValue }) {
+  const [quantity, setQuantity] = useState(initialValue);
   return (
     <>
       <span>Quantity</span>
