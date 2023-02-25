@@ -1,5 +1,5 @@
 import React from 'react';
-import { Btn1 } from '../../../Common/Buttons';
+import { PrimaryButton } from '../../../Common/Buttons';
 
 export default function OrderForm() {
   return (
@@ -50,7 +50,7 @@ export default function OrderForm() {
         <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md">Apply</button>
       </div>
       <div className="flex flex-col items-center gap-1.5">
-        <Btn1>Proceed to checkout</Btn1>
+        <PrimaryButton>Proceed to checkout</PrimaryButton>
         <p>Continue Shopping</p>
       </div>
     </div>

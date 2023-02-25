@@ -1,6 +1,6 @@
 import React from 'react';
 import Rating from '../../../../assets/img/rating.svg';
-import { Btn2, SmallBtn } from '../../../../Common/Buttons';
+import { SecondaryButton, SmallBtn } from '../../../../Common/Buttons';
 
 export default function ShopInfo() {
   return (

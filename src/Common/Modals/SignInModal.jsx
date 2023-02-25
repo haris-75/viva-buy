@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { close } from '../../Components/Svg';
 import { InputLabel, InputField, InputCheckbox } from '../Inputs';
-import { Btn1 } from '../Buttons';
+import { PrimaryButton } from '../Buttons';
 
 export default function SignInModal(props) {
   const [form, setForm] = useState({
@@ -74,7 +74,7 @@ export default function SignInModal(props) {
           </div>
 
           <div className="mt-5">
-            <Btn1>Sign in</Btn1>
+            <PrimaryButton>Sign in</PrimaryButton>
           </div>
           <div className="mt-[10px] text-center">
             <span className="mr-1 font-sans text-sm leading-6 text-black">Not a member yet?</span>

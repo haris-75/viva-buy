@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { close } from '../../Components/Svg';
 import { InputLabel, InputField } from '../Inputs';
-import { Btn1 } from '../Buttons';
+import { PrimaryButton } from '../Buttons';
 
 export default function RegisterModal(props) {
   const [form, setForm] = useState({
@@ -62,7 +62,7 @@ export default function RegisterModal(props) {
             />
           </div>
           <div className="mt-5 flex justify-center">
-            <Btn1>Register</Btn1>
+            <PrimaryButton>Register</PrimaryButton>
           </div>
           <div className="mt-[10px] text-center">
             <span className="mr-1 font-sans text-sm leading-6 text-black">Already a member?</span>
