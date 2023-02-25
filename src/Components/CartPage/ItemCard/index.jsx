@@ -1,42 +1,43 @@
 import React from 'react';
 import ItemDescription from '../ItemDescription';
 
-export default function ItemCard() {
+export default function ItemCard({ itemsArray, fee, date, shipsFrom }) {
   return (
-    <div>
+    <div className="flex flex-col gap-4 p-4 shadow-shadow1 rounded-[10px]">
       <div className="flex gap-2.5 items-center">
         <img src="/assets/shop-1.png" width={40} />
         <p>Shop name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</p>
       </div>
-      <div className="flex justify-between">
-        <ItemDescription />
-        <div>
-          <p className="text-xl font-black">8,000Ks</p>
-          <div className="text-xs font-thin">
-            <span className="line-through">10,000Ks</span>&nbsp;
-            <span className="text-[#258635]">{'(20%  off)'}</span>
-          </div>
-        </div>
+
+      <div className="flex flex-col gap-4">
+        {itemsArray.map((ele) => (
+          <ItemDescription key={ele} price={ele} />
+        ))}
       </div>
-      <div className="flex justify-between">
-        <textarea
+
+      <div className="flex justify-between gap-1">
+        <input
           type="text"
           placeholder="Add a note to seller (optional)"
-          className="w-[80%] rounded-[5px] border-[1px] border-none shadow:shadow-1 bg-gray py-[4px] px-3 font-sans text-sm font-[400] leading-6 text-disabled outline-none  sm:font-light sm:leading-6"
+          className="sm:w-[65%] md-lg:w-[65%] xs:w-[45%] rounded-[5px] border-[1px] border-none shadow:shadow-1 bg-gray py-[4px] px-3 font-sans sm:text-sm xs:text-[10px]  font-[400] leading-6 text-disabled outline-none  sm:font-light sm:leading-6"
         />
         <div>
           <div className="font-bold">
-            <span className="text-base">Deliver fee:</span>&nbsp;
-            <span className="text-xl">2,000 Ks</span>
+            <span className="sm:text-base xs:text-[11px]">Deliver fee:</span>&nbsp;
+            <span
+              className={`sm:text-xl xs:text-[13px]l ${fee === 'Free' ? 'text-[#258635]' : ''}`}
+            >
+              {fee}
+            </span>
           </div>
           <div>
-            <div className="font-thin text-sm">
+            <div className="font-thin sm:text-sm xs:text-[10px]">
               <span>Earliest delivery:</span>&nbsp;
-              <span>21/Feb/2023</span>
+              <span>{date}</span>
             </div>
-            <div className="font-thin text-sm">
+            <div className="font-thin sm:text-sm xs:text-[10px]">
               <span>Ships from:</span>&nbsp;
-              <span>Yangon</span>
+              <span>{shipsFrom}</span>
             </div>
           </div>
         </div>

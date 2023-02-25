@@ -7,6 +7,7 @@ import MobileMenubar from '../MobileMenubar';
 
 import { ToteIcon, UserIcon, MenuIcon } from '../../Components/Svg';
 import { useRouter } from 'next/router';
+import { navigateToPage } from '../../utils/navigation';
 
 export default function Header(props) {
   const router = useRouter();
