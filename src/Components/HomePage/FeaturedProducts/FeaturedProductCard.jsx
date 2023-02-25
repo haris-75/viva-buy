@@ -11,10 +11,10 @@ import { useRouter } from 'next/router';
 export default function FeaturedProductCard(props) {
   const [favorite, setFavorite] = useState(true);
 
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
-      onClick={() => navigateToPage(router, 'product')}
+      onClick={() => navigateToPage(route, 'product')}
       className="group/item flex w-1/2 max-w-max cursor-pointer flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/3 lg:rounded-[5px] lg:p-[10px] xl:w-1/4"
     >
       <div className="rounded-[5px] lg:rounded-[5px]">

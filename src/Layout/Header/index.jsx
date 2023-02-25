@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import { navigateToPage } from '../../utils/navigation';
 
 export default function Header(props) {
-  const router = useRouter();
+  const route = useRouter();
   const [mobileMenu, setMobileMenu] = useState(false);
   const isLaptop = useMediaQuery({
     query: '(max-width: 768px)'
@@ -39,7 +39,7 @@ export default function Header(props) {
         <div className="flex h-full flex-row items-center gap-0 sm:gap-5">
           <div
             className="trnasition-all flex h-[30px] w-[30px] cursor-pointer items-center rounded-full p-[6px] duration-200 hover:bg-hoverColor hover:shadow-shadow1"
-            onClick={() => navigateToPage(router, 'cart')}
+            onClick={() => navigateToPage(route, 'cart')}
           >
             <ToteIcon />
           </div>

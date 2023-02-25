@@ -6,10 +6,10 @@ import { navigateToPage } from '../../../utils/navigation';
   /* category product card */
 }
 export default function FeaturedProductCard() {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
-      onClick={() => navigateToPage(router, 'shop')}
+      onClick={() => navigateToPage(route, 'shop')}
       className="flex w-1/2 cursor-pointer flex-col flex-nowrap rounded-[5px]  p-[5px] sm:w-1/3 lg:rounded-[10px] lg:p-[10px]"
     >
       <div className="rounded-[5px] border-[0.2px] border-black p-2 pb-0 transition-all hover:border-transparent hover:shadow-shadow2 lg:rounded-[5px] lg:p-5  lg:pb-0">
