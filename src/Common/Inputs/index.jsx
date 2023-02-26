@@ -24,7 +24,7 @@ export function InputLabel(props) {
 
 export function InputCheckbox({ label, name, value, checked, onClick, onChange }) {
   return (
-    <div className="relative flex h-[20px] items-center pl-[55px]">
+    <div className="relative flex h-[20px] items-center pl-[35px]">
       <input
         type="checkbox"
         className="absolute top-0 left-0 z-[1] h-full w-full cursor-pointer appearance-none bg-none opacity-0 outline-none"
@@ -47,7 +47,7 @@ export function InputCheckbox({ label, name, value, checked, onClick, onChange }
 
 export function InputRadio({ label, name, value, checked, onClick }) {
   return (
-    <div className="relative mb-3 flex h-[35px] items-center pl-[55px] sm:mb-4">
+    <div className="relative flex h-[25px] items-center pl-[55px] ">
       <input
         type="radio"
         name={name ? name : ''}
@@ -59,8 +59,10 @@ export function InputRadio({ label, name, value, checked, onClick }) {
 
       <label
         htmlFor=""
-        className={`border-color absolute top-0 left-0 h-[40px] w-[40px] rounded-full border-[1px] border-solid bg-secondary transition-all duration-200 ease-in-out before:absolute before:top-1/2 before:left-1/2 before:h-[23px] before:w-[23px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-black before:transition-all before:duration-200 before:ease-in-out before:content-[""] sm:h-[35px] sm:w-[35px] ${
-          checked ? 'before:visible before:opacity-[1]' : 'before:hidden before:opacity-0'
+        className={`border-color absolute top-0 left-0 h-[25px] w-[25px] rounded-full border-[1px] border-solid  transition-all duration-200 ease-in-out before:absolute before:top-1/2 before:left-1/2 before:h-[11px] before:w-[11px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-primary before:transition-all before:duration-200 before:ease-in-out before:content-[""] sm:h-[25px] sm:w-[25px] ${
+          checked
+            ? 'before:visible before:opacity-[1] bg-black'
+            : 'before:hidden before:opacity-0 bg-white'
         }`}
       ></label>
       <span className="font-sans text-base leading-6 text-black sm:text-xl">{label}</span>
