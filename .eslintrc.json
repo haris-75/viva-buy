@@ -3,7 +3,11 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended"
+  ],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -12,6 +16,12 @@
   "plugins": ["react"],
   "rules": {
     "semi": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "@next/next/no-img-element": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
