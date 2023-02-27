@@ -1,7 +1,15 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import { PrimaryButton } from '../../../Common/Buttons';
+import EditAddressModal from '../../../Common/Modals/EditAddressModal';
+import SelectAddressModal from '../../../Common/Modals/SelectAddressModal';
+import { navigateToPage } from '../../../utils/navigation';
 
 export default function OrderForm() {
+  const [showSelectAddressModal, setShowSelectAddressModal] = useState();
+  const [showEditAddressModal, setShowEditAddressModal] = useState();
+  const [editOption, setEditOption] = useState(false);
+  const route = useRouter();
   return (
     <div className="flex flex-col gap-7  md-lg:p-7 md:p-4 sm:p-7 xs:p-4 border-[1px] rounded-[10px]">
       <h1 className="text-xl font-bold">Order Summary</h1>
@@ -27,7 +35,12 @@ export default function OrderForm() {
             <img src="/assets/cart/delivery.svg" /> &nbsp;
             <span>Yangon, Yankin Township</span>
           </span>
-          <span className="text-disabled">Change</span>
+          <span
+            className="text-disabled cursor-pointer"
+            onClick={() => setShowSelectAddressModal(true)}
+          >
+            Change
+          </span>
         </div>
         <div className="flex justify-between text-base font-bold">
           <span>{'Total (5 items)'}</span>
@@ -50,9 +63,34 @@ export default function OrderForm() {
         <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md">Apply</button>
       </div>
       <div className="flex flex-col items-center gap-1.5">
-        <PrimaryButton>Proceed to checkout</PrimaryButton>
+        <PrimaryButton onClick={() => navigateToPage(route, 'checkout')}>
+          Proceed to checkout
+        </PrimaryButton>
         <p>Continue Shopping</p>
       </div>
+      {showSelectAddressModal ? (
+        <SelectAddressModal
+          closeModal={() => setShowSelectAddressModal(false)}
+          showEditAddressModal={() => {
+            setShowSelectAddressModal(false);
+            setShowEditAddressModal(true);
+          }}
+          setEditOption={setEditOption}
+        />
+      ) : (
+        ''
+      )}
+      {showEditAddressModal ? (
+        <EditAddressModal
+          closeModal={() => {
+            setShowEditAddressModal(false);
+            setEditOption(false);
+          }}
+          edit={editOption}
+        />
+      ) : (
+        ''
+      )}
     </div>
   );
 }

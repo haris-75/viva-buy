@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PaymentModal from '../../../Common/Modals/PaymenModal';
+import PaymentModal from '../../../Common/Modals/PaymentModal';
 import AddCardModal from '../../../Common/Modals/AddCardModal';
 
 export default function BillingInfo() {

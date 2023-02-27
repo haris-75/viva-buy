@@ -72,7 +72,7 @@ export function InputRadio({ label, name, value, checked, onClick }) {
 
 export function InputDropDown({ show, toggleDropDown, labelText, id }) {
   return (
-    <>
+    <div className="relative">
       <label>{labelText}</label>
       <div
         className="w-full cursor-pointer bg-white text-black border border-black flex  justify-between	p-2.5 rounded-md font-medium "
@@ -85,7 +85,7 @@ export function InputDropDown({ show, toggleDropDown, labelText, id }) {
       <div
         className={`${
           show ? '' : 'hidden'
-        } z-10 bg-white border border-black  rounded-md shadow w-full `}
+        } z-10 bg-white border border-black  rounded-md shadow w-full absolute mt-1`}
       >
         <ul className="p-2.5">
           {[1, 2, 3, 4].map((ele) => (
@@ -95,6 +95,43 @@ export function InputDropDown({ show, toggleDropDown, labelText, id }) {
           ))}
         </ul>
       </div>
-    </>
+    </div>
+  );
+}
+
+export function InputDropDownSecondary({ show, toggleDropDown, labelText, id, value, setValue }) {
+  return (
+    <div className="relative">
+      <label>{labelText}*</label>
+      <div
+        className="w-full cursor-pointer bg-white text-black border border-black flex  justify-between	p-2.5 rounded-md font-medium "
+        onClick={toggleDropDown}
+      >
+        <span className={`${value ? '' : 'text-disabled'}`}>
+          {value ? value : `Select a ${labelText}`}
+        </span>
+        <img src="/assets/dropdown.svg" />
+      </div>
+
+      <div
+        className={`${
+          show ? '' : 'hidden'
+        } z-10 bg-white border border-black  rounded-md shadow w-full absolute  mt-1`}
+      >
+        <ul className="p-2.5">
+          {[1, 2, 3, 4].map((ele) => (
+            <li
+              key={ele + id}
+              className="my-2.5 px-2.5 cursor-pointer rounded-md hover:bg-gray"
+              onClick={() => setValue(`${labelText} ${ele}`)}
+            >
+              <span>
+                {labelText}&nbsp; {ele}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

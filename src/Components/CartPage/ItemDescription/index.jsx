@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import EditItemModal from '../../../Common/Modals/EditItemModal';
 
 export default function ItemDescription({ price }) {
   const [quantity, setQuantity] = useState(1);
+  const [showEditModal, setShowEditModal] = useState(false);
   return (
     <div className="flex gap-4">
       <div>
@@ -46,10 +48,13 @@ export default function ItemDescription({ price }) {
           </button>
         </div>
         <div className="text-sm flex gap-6">
-          <span>Edit</span>
+          <span className="cursor-pointer" onClick={() => setShowEditModal(true)}>
+            Edit
+          </span>
           <span>Remove</span>
         </div>
       </div>
+      {showEditModal ? <EditItemModal closeModal={() => setShowEditModal(false)} /> : ''}
     </div>
   );
 }
