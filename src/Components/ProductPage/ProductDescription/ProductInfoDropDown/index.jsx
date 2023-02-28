@@ -42,9 +42,10 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
         ) : (
           ''
         )}
-        {textArray?.map((ele) => (
+        {/* {textArray?.map((ele) => (
           <p key={ele}>{ele}</p>
-        ))}
+        ))} */}
+        <p>{textArray?.join(' ')}</p>
         {subList ? (
           <ul className="list-disc pl-5 mt-2.5">
             <li>Lorem ipsum</li>

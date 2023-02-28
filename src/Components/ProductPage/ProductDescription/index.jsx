@@ -16,9 +16,10 @@ export default function ProductDescription() {
     <div className="flex flex-col gap-5">
       <div>
         <div className="font-thin text-2xl">
-          <p>Product name lorem ipsum dolor sit amet</p>
-          <p>consectetur adipiscing elit sed do </p>
-          <p>eiusmod tempor incididunt</p>
+          <p>
+            Product name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+            tempor incididunt
+          </p>
         </div>
         <h1 className="text-2xl font-bold">10,000 Ks</h1>
       </div>
@@ -36,7 +37,7 @@ export default function ProductDescription() {
         toggleDropDown={() => setShowDropDown2(!showDropDown2)}
       />
       <QuantityButton />
-      <div className="flex">
+      <div className="flex items-center">
         <InputCheckbox
           checked={giftWrapChecked}
           onClick={() => setGiftWrapChecked(!giftWrapChecked)}
@@ -44,10 +45,10 @@ export default function ProductDescription() {
         />
         <h1 className="font-bold">Gift wrap for</h1>&nbsp; <span>1,500Ks</span>
       </div>
-      <div className="flex  justify-between items-center gap-2.5">
+      <div className="flex xs:flex-row flex-col   justify-between items-center gap-2.5">
         <PrimaryButton>Add to bag</PrimaryButton>
 
-        <div className="flex gap-2.5">
+        <div className="flex  gap-2.5">
           <div>
             <RoundSvgButton className="p-3 text-base md:text-xl md:px-[8px] md:py-[9px]">
               <img

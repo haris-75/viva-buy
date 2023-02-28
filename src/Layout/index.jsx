@@ -19,7 +19,7 @@ export default function WebApp({ children }) {
   };
   return (
     <div className="w-full ">
-      <div className="mx-auto box-content max-w-page-mx px-4 md:px-4 lg:px-14 sm:px-8  xs:px-8">
+      <div className="mx-auto box-content max-w-page-mx px-4 md:px-4 lg:px-14 sm:px-8  xs:px-4">
         <Header setRegisterModal={setRegisterModal} />
         <main>{children}</main>
       </div>

@@ -24,7 +24,7 @@ export function InputLabel(props) {
 
 export function InputCheckbox({ label, name, value, checked, onClick, onChange }) {
   return (
-    <div className="relative flex h-[20px] items-center pl-[35px]">
+    <div className="relative flex h-[20px] items-center pl-[25px]">
       <input
         type="checkbox"
         className="absolute top-0 left-0 z-[1] h-full w-full cursor-pointer appearance-none bg-none opacity-0 outline-none"
