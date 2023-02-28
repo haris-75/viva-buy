@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import RegisterModal from '../common/Modals/RegisterModal';
-import SignInModal from '../common/Modals/SignInModal';
+import RegisterModal from '../Common/Modals/RegisterModal';
+import SignInModal from '../Common/Modals/SignInModal';
 
 export default function WebApp({ children }) {
   const [registerModal, setRegisterModal] = useState(false);
