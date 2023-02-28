@@ -28,7 +28,7 @@ export function TopProducts(props) {
 }
 
 const ProductPair = (props) => {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
       className={`relative flex cursor-pointer flex-row  sm:w-1/3 lg:w-1/4 ${
@@ -37,7 +37,7 @@ const ProductPair = (props) => {
     >
       {[1, 2].map((ele) => (
         <div
-          onClick={() => navigateToPage(router, 'product')}
+          onClick={() => navigateToPage(route, 'product')}
           key={ele}
           className={`relative h-[145px] w-full max-w-[306px] p-[5px]  lg:p-[10px] ${
             ele % 2 === 0 ? 'sm:h-[180px] lg:h-[220px]' : 'sm:h-[280px] lg:h-[300px]'

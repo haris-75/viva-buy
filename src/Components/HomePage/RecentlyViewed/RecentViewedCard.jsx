@@ -7,10 +7,10 @@ import { HeartOutlinedIcon } from '../../Svg';
   /* Recent view card  */
 }
 export default function RecentViewedCard(props) {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
-      onClick={() => navigateToPage(router, 'shop')}
+      onClick={() => navigateToPage(route, 'shop')}
       className="flex w-1/4 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
     >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px] relative group/item">

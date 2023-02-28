@@ -7,10 +7,10 @@ import { HeartOutlinedIcon } from '../../Svg/index';
   /* Recent view card  */
 }
 export default function SingleShop(props) {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
-      onClick={() => navigateToPage(router, 'shop')}
+      onClick={() => navigateToPage(route, 'shop')}
       className="flex  flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/4 xs:w-1/3 lg:rounded-[5px] lg:p-[10px] "
     >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px] relative group/item">

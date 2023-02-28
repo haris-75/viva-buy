@@ -2,18 +2,14 @@
 //const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: {
-    enabled: true,
-    content: [
-      // './src/Components/**/*.{js,ts,jsx,tsx}',
-      './src/Components/**/**/*.{js,ts,jsx,tsx}',
-      './src/Common/**/*.{js,ts,jsx,tsx}',
-      './src/Layout/**/*.{js,ts,jsx,tsx}',
-      './src/pages/**/*.{js,ts,jsx,tsx}'
-    ],
-    options: {
-      safelist: []
-    }
+  content: [
+    './src/Components/**/**/*.{js,ts,jsx,tsx}',
+    './src/Common/**/*.{js,ts,jsx,tsx}',
+    './src/Layout/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}'
+  ],
+  options: {
+    safelist: []
   },
   theme: {
     screens: {

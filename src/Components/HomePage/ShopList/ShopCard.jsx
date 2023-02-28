@@ -7,10 +7,10 @@ import Rating from '../../../assets/img/rating.svg';
   /* shop card */
 }
 export default function ShopCard() {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <div
-      onClick={() => navigateToPage(router, 'shop')}
+      onClick={() => navigateToPage(route, 'shop')}
       className="w-1/4 cursor-pointer p-[5px] px-[5px] lg:w-1/5 lg:p-[10px] xl:w-1/6"
     >
       <div className="group/item flex flex-col flex-nowrap items-center">

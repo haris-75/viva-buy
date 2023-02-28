@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Btn1({ children, className, onClick, disabled }) {
+export function PrimaryButton({ children, className, onClick, disabled }) {
   return (
     <button
       className={`${
@@ -16,7 +16,7 @@ export function Btn1({ children, className, onClick, disabled }) {
   );
 }
 
-export function Btn2({ children, className, onClick, disabled }) {
+export function SecondaryButton({ children, className, onClick, disabled }) {
   return (
     <button
       className={`${

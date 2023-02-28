@@ -3,10 +3,10 @@ import React from 'react';
 import { navigateToPage } from '../../utils/navigation';
 
 export default function Logo(props) {
-  const router = useRouter();
+  const route = useRouter();
   return (
     <p
-      onClick={() => navigateToPage(router, '/')}
+      onClick={() => navigateToPage(route, '/')}
       className="h-max font-sans text-sm font-bold text-black lg:text-2xl  cursor-pointer"
     >
       LOGO
