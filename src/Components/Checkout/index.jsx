@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PrimaryButton } from '../../Common/Buttons';
 import BillingInfo from './BillingInfo';
 import CheckoutItemCard from './CheckoutItemCard';
+import ShowAlertModal from '../../Common/Modals/ShowAlertModal';
 
 export default function CheckoutPage() {
+  const [showAlertModal, setShowAlertModal] = useState(false);
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
       <div className="flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-3 gap-4">
@@ -47,11 +49,16 @@ export default function CheckoutPage() {
           <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md">Apply</button>
         </div>
         <div>
-          <PrimaryButton className="h-[40px] w-full rounded-[35px] bg-primary px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1">
+          <PrimaryButton
+            className="h-[40px] w-full rounded-[35px] bg-primary px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1 cursor-pointer"
+            onClick={() => setShowAlertModal(true)}
+          >
             Place order
           </PrimaryButton>
         </div>
       </div>
+
+      {showAlertModal ? <ShowAlertModal closeModal={() => setShowAlertModal(false)} /> : ''}
     </div>
   );
 }
