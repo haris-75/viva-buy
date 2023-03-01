@@ -64,7 +64,7 @@ export default function OrderForm() {
       </div>
       <div className="flex flex-col items-center gap-1.5">
         <PrimaryButton
-          className="h-[40px] w-full max-w-[400px] rounded-[35px] bg-primary px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1 md:text-[13px] md-lg:text-base"
+          className="h-[40px] w-full rounded-[35px] bg-primary px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1 md:text-[13px] md-lg:text-base"
           onClick={() => navigateToPage(route, 'checkout')}
         >
           Proceed to checkout

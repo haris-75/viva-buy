@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CheckoutItemCard({ price, discountedPrice, count }) {
   return (
-    <div className="grid sm:grid-cols-10 grid-cols-1 justify-between p-4 bg-white border-[0.5px] border-disabled rounded-[5px]">
+    <div className="grid sm:grid-cols-10 sm:gap-0 grid-cols-1 gap-2 justify-between p-4 bg-white border-[0.5px] border-disabled rounded-[5px]">
       <div className="col-span-2">
         <div className="relative w-fit">
           <img src="/assets/shop-3.png" width={90} />
@@ -24,7 +24,7 @@ export default function CheckoutItemCard({ price, discountedPrice, count }) {
         <div>
           <p className="md-lg:xl md:text-lg sm:xl xs:text-lg font-black">{`${discountedPrice}Ks`}</p>
 
-          <div className="md-lg:text-sm md:text-xs sm:text-sm xs:text-xs font-thin">
+          <div className="md-lg:text-sm md:text-xs sm:text-sm xs:text-xs font-thin w-max">
             <span className="line-through">{`${price}Ks`}</span>&nbsp;
             <span className="text-[#258635]">{'(20%  off)'}</span>
           </div>

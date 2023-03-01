@@ -59,11 +59,11 @@ export default function ShopHeader() {
                 </p>
               </div>
               <div className="flex gap-3">
-                <div className="flex">
+                <div className="flex gap-1">
                   <h1 className="font-black">100</h1>
                   <p>Followers</p>
                 </div>
-                <div className="flex">
+                <div className="flex gap-1">
                   <h1 className="font-black">100</h1>
                   <p>Following</p>
                 </div>
