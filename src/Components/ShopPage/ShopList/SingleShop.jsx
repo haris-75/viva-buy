@@ -4,14 +4,15 @@ import { navigateToPage } from '../../../utils/navigation';
 import { HeartOutlinedIcon } from '../../Svg/index';
 
 {
-  /* Recent view card  */
+  /* Single shop card  */
 }
-export default function SingleShop(props) {
+export default function SingleShop() {
   const route = useRouter();
+
   return (
     <div
       onClick={() => navigateToPage(route, 'shop')}
-      className="flex  flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/4 xs:w-1/3 lg:rounded-[5px] lg:p-[10px] "
+      className="flex  flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/4 sm:w-1/3 w-[35%] lg:rounded-[5px] lg:p-[10px] "
     >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px] relative group/item">
         <div className="absolute border-2 rounded-full p-1 bg-white  right-2.5 top-2.5 hover:shadow-shadow1 hover:border-white group-hover/item:block hidden">

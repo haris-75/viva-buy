@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import RatingDropDown from '../../ProductPage/ShopReview/RatingDropDown';
 import SingleShop from './SingleShop';
 
 export default function ShopList() {
   const [ratingValue, setRatingValue] = useState('Rating: High to Low');
   const [showRating, setShowRating] = useState(false);
+  const isMobile = useMediaQuery({
+    query: '(max-width: 530px)'
+  });
   return (
     <div className="md-lg:col-span-3 md:col-span-4 xs:col-span-1">
       <div className="flex justify-end mb-10 ">
@@ -23,9 +27,7 @@ export default function ShopList() {
           <SingleShop />
           <SingleShop />
           <SingleShop />
-          <SingleShop />
-          {/* <SingleShop />
-          <SingleShop /> */}
+          {isMobile ? '' : <SingleShop />}
         </div>
       ))}
     </div>

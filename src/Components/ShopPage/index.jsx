@@ -15,7 +15,7 @@ export default function ShopPage() {
       <ShopReview singleLine />
       <div>
         <div>
-          <h1 className="text-2xl font-black mb-4 border-gray border-b">Shop Policy</h1>
+          <h1 className="text-2xl font-black my-4 border-gray border-b">Shop Policy</h1>
         </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

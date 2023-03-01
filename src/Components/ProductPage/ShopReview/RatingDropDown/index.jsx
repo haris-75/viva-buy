@@ -15,7 +15,7 @@ export default function RatingDropDown({ value, setValue, toggle, show }) {
           <img width={6} src="/assets/dropdown2.svg" />
         </span>
       </div>
-      <div className="px-2.5   shadow-shadow1 mt-1 rounded-[5px] absolute  top-10 bg-white">
+      <div className="px-2.5   shadow-shadow1 mt-1 rounded-[5px] absolute  top-10 bg-white z-1">
         {['Relevance', 'Recent', 'Rating: High to Low', 'Rating: Low to High'].map((ele) => (
           <p
             className={`sm:text-sm text-xs hover:bg-gray cursor-pointer rounded-[5px] px-2.5 my-2.5 ${
