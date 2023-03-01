@@ -11,7 +11,7 @@ export default function OrderForm() {
   const [editOption, setEditOption] = useState(false);
   const route = useRouter();
   return (
-    <div className="flex flex-col gap-7  md-lg:p-7 md:p-4 sm:p-7 xs:p-4 border-[1px] rounded-[10px]">
+    <div className="flex flex-col gap-7  md-lg:p-7 md:p-4 sm:p-7 p-4 border-[1px] rounded-[10px]">
       <h1 className="text-xl font-bold">Order Summary</h1>
       <div className="flex flex-col gap-[5px]">
         <div className="flex justify-between text-base ">
@@ -58,15 +58,18 @@ export default function OrderForm() {
         />
         <input
           placeholder="Enter coupon code"
-          className="w-full border-[1px] border-black py-2.5 px-4 rounded-l-md pl-8"
+          className="w-full border-[1px] border-black py-2.5 px-4 rounded-l-md pl-8 md:text-xs md-lg:text-sm xl:text-base text-base"
         />
         <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md">Apply</button>
       </div>
       <div className="flex flex-col items-center gap-1.5">
-        <PrimaryButton onClick={() => navigateToPage(route, 'checkout')}>
+        <PrimaryButton
+          className="h-[40px] w-full max-w-[400px] rounded-[35px] bg-primary px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1 md:text-[13px] md-lg:text-base"
+          onClick={() => navigateToPage(route, 'checkout')}
+        >
           Proceed to checkout
         </PrimaryButton>
-        <p>Continue Shopping</p>
+        <p className="md:text-[13px] md-lg:text-base">Continue Shopping</p>
       </div>
       {showSelectAddressModal ? (
         <SelectAddressModal

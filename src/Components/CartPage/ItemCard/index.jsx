@@ -6,36 +6,36 @@ export default function ItemCard({ itemsArray, fee, date, shipsFrom }) {
     <div className="flex flex-col gap-4 p-4 shadow-shadow1 rounded-[10px]">
       <div className="flex gap-2.5 items-center">
         <img src="/assets/shop-1.png" width={40} />
-        <p>Shop name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod</p>
+        <p className="line-clamp-2">
+          Shop name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+        </p>
       </div>
 
       <div className="flex flex-col gap-4">
-        {itemsArray.map((ele) => (
-          <ItemDescription key={ele} price={ele} />
+        {itemsArray.map(({ price, text }) => (
+          <ItemDescription key={price + text} price={price} text={text} />
         ))}
       </div>
 
-      <div className="flex justify-between gap-1">
-        <input
+      <div className="flex justify-between gap-1 flex-col xs-m:flex-row">
+        <textarea
           type="text"
           placeholder="Add a note to seller (optional)"
-          className="sm:w-[65%] md-lg:w-[65%] xs:w-[45%] rounded-[5px] border-[1px] border-none shadow:shadow-1 bg-gray py-[4px] px-3 font-sans sm:text-sm xs:text-[10px]  font-[400] leading-6 text-disabled outline-none  sm:font-light sm:leading-6"
+          className="xs-m:w-[65%] md-lg:w-[65%] w-[100%] rounded-[5px] border-[1px] border-none shadow:shadow-1 bg-gray py-[4px] px-3 font-sans sm:text-sm text-[10px]  font-[400] leading-6 text-disabled outline-none  sm:font-light sm:leading-6"
         />
-        <div>
+        <div className="xs-m:p-0 pl-1">
           <div className="font-bold">
-            <span className="sm:text-base xs:text-[11px]">Deliver fee:</span>&nbsp;
-            <span
-              className={`sm:text-xl xs:text-[13px]l ${fee === 'Free' ? 'text-[#258635]' : ''}`}
-            >
+            <span className="sm:text-base text-[11px]">Deliver fee:</span>&nbsp;
+            <span className={`sm:text-xl text-[13px] ${fee === 'Free' ? 'text-[#258635]' : ''}`}>
               {fee}
             </span>
           </div>
           <div>
-            <div className="font-thin sm:text-sm xs:text-[10px]">
+            <div className="font-thin sm:text-sm text-[10px]">
               <span>Earliest delivery:</span>&nbsp;
               <span>{date}</span>
             </div>
-            <div className="font-thin sm:text-sm xs:text-[10px]">
+            <div className="font-thin sm:text-sm text-[10px]">
               <span>Ships from:</span>&nbsp;
               <span>{shipsFrom}</span>
             </div>

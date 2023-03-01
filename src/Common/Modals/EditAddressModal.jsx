@@ -30,7 +30,7 @@ export default function EditAddressModal({ closeModal, edit }) {
 
         {/* form */}
         <div className="flex flex-col gap-8">
-          <div className="flex justify-between gap-4">
+          <div className="flex flex-col xs:flex-row justify-between gap-4">
             <div className="w-full">
               <p>Full Name*</p>
               <InputField type="text" />
@@ -40,7 +40,7 @@ export default function EditAddressModal({ closeModal, edit }) {
               <InputField type="text" />
             </div>
           </div>
-          <div className="flex justify-between gap-4">
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
             <div className="w-full">
               <InputDropDownSecondary
                 show={showRegionDropDown}
@@ -93,14 +93,19 @@ export default function EditAddressModal({ closeModal, edit }) {
         <div className="my-5 flex justify-end cursor-pointer gap-2.5">
           <div>
             <PrimaryButton
-              className="w-[166px] h-[40px] max-w-[400px] rounded-[35px] bg-white border-2 px-9 py-[4px] text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1"
+              className="xs-m:text-base text-xs w-[100px] xs-m:w-[166px] h-[40px] max-w-[400px] rounded-[35px] bg-white border-2 xs-m:px-9 px-4 xs-m:py-[4px] text-center font-sans font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1"
               onClick={closeModal}
             >
               Cancel
             </PrimaryButton>
           </div>
           <div>
-            <PrimaryButton onClick={closeModal}>Save address</PrimaryButton>
+            <PrimaryButton
+              className="h-[40px] xs-m:text-base text-xs w-full max-w-[400px] rounded-[35px] bg-primary xs-m:px-9 px-4 xs-m:py-[4px] text-center font-sans font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1"
+              onClick={closeModal}
+            >
+              Save address
+            </PrimaryButton>
           </div>
         </div>
       </div>

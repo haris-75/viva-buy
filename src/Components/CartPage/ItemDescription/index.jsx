@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import EditItemModal from '../../../Common/Modals/EditItemModal';
 
-export default function ItemDescription({ price }) {
+export default function ItemDescription({ price, text }) {
   const [quantity, setQuantity] = useState(1);
   const [showEditModal, setShowEditModal] = useState(false);
   return (
-    <div className="flex gap-4">
-      <div>
+    <div className="flex gap-4 flex-col xs-m:grid xs-m:grid-cols-6">
+      <div className="xs-m:col-span-2">
         <img src="/assets/shop-3.png" width={175} />
       </div>
-      <div className="flex flex-col gap-3.5">
-        <div className="flex  justify-between md:gap-8 sm:gap-4 xs:gap-2">
-          <p className="text-lg w-full ">Product name lorem ipsum dolor sit amet...</p>
+      <div className="flex flex-col gap-3.5 xs-m:col-span-4">
+        <div className="flex  justify-between md:gap-8 sm:gap-4 gap-2">
+          <p className="text-lg w-full line-clamp-2">{text}</p>
           <div>
             <p className="text-xl font-black">{`${price}Ks`}</p>
             {price === 8000 ? (

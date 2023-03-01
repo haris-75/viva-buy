@@ -47,7 +47,7 @@ export function InputCheckbox({ label, name, value, checked, onClick, onChange }
 
 export function InputRadio({ label, name, value, checked, onClick }) {
   return (
-    <div className="relative flex h-[25px] items-center pl-[55px] ">
+    <div className="relative flex h-[25px] items-center pl-[35px] ">
       <input
         type="radio"
         name={name ? name : ''}

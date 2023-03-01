@@ -34,23 +34,40 @@ export default function SelectAddressModal({ closeModal, showEditAddressModal, s
         </div>
 
         {/* form */}
-        <div>
+        <div className="text-sm xs-m:text-base">
           <div className="flex justify-between">
-            <div className="flex">
+            <div className="flex gap-2 w-full">
               <div className="my-auto">
                 <InputRadio
                   checked={paymentMethod === 'address-1'}
                   onClick={() => setPaymentMethod('address-1')}
                 />
               </div>
-              <div className="flex flex-col items center font-normal">
-                <p>Full Name</p>
-                <div className="my-1">
-                  <p>Address Line 1</p>
-                  <p>{'Address Line 2 (optional)'}</p>
-                  <p>City,Township</p>
+              <div className="flex flex-col items center font-normal w-full">
+                <div className="flex justify-between">
+                  <div>
+                    <p>Full Name</p>
+                    <div className="my-1">
+                      <p>Address Line 1</p>
+                      <p>{'Address Line 2 (optional)'}</p>
+                      <p>City,Township</p>
+                    </div>
+                    <p>091234234</p>
+                  </div>
+                  <div className="flex font-light gap-4">
+                    <span
+                      className="cursor-pointer"
+                      onClick={() => {
+                        showEditAddressModal();
+                        setEditOption(true);
+                      }}
+                    >
+                      Edit
+                    </span>
+                    <span>Remove</span>
+                  </div>
                 </div>
-                <p>091234234</p>
+
                 <div>
                   <p className="w-fit mt-[5px] font-bold bg-gray rounded-full py-[5px] px-2.5">
                     Default address
@@ -58,21 +75,9 @@ export default function SelectAddressModal({ closeModal, showEditAddressModal, s
                 </div>
               </div>
             </div>
-            <div className="flex font-light gap-4">
-              <span
-                className="cursor-pointer"
-                onClick={() => {
-                  showEditAddressModal();
-                  setEditOption(true);
-                }}
-              >
-                Edit
-              </span>
-              <span>Remove</span>
-            </div>
           </div>
           <div className="flex mt-5 justify-between">
-            <div className="flex">
+            <div className="flex gap-2">
               <div className="my-auto">
                 <InputRadio
                   checked={paymentMethod === 'address-2'}
@@ -96,7 +101,7 @@ export default function SelectAddressModal({ closeModal, showEditAddressModal, s
             </div>
           </div>
           <div className="flex mt-5 justify-between">
-            <div className="flex">
+            <div className="flex gap-2">
               <div className="my-auto">
                 <InputRadio
                   checked={paymentMethod === 'address-3'}
