@@ -6,7 +6,7 @@ import CheckoutItemCard from './CheckoutItemCard';
 export default function CheckoutPage() {
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-3 gap-4">
         <h1 className="font-bold text-2xl">Please confirm and submit your order</h1>
         <BillingInfo />
       </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import ProductPage from '../Components/ProductPage';
+import Layout from '../Layout';
 
 export default function Product() {
   return (
-    <div>
+    <Layout>
       <ProductPage />
-    </div>
+    </Layout>
   );
 }

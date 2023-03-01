@@ -4,7 +4,7 @@ import Footer from './Footer';
 import RegisterModal from '../Common/Modals/RegisterModal';
 import SignInModal from '../Common/Modals/SignInModal';
 
-export default function WebApp({ children }) {
+export default function Layout({ children }) {
   const [registerModal, setRegisterModal] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
 
