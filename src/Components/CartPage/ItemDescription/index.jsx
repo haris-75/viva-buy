@@ -11,13 +11,13 @@ export default function ItemDescription({ price, text }) {
       </div>
       <div className="flex flex-col gap-3.5 xs-m:col-span-4">
         <div className="flex  justify-between md:gap-8 sm:gap-4 gap-2">
-          <p className="text-lg w-full line-clamp-2">{text}</p>
+          <p className="text-lg w-full line-clamp-2 max-w-[400px]">{text}</p>
           <div>
-            <p className="text-xl font-black">{`${price}Ks`}</p>
-            {price === 8000 ? (
+            <p className="text-xl font-black text-end">{`${price}Ks`}</p>
+            {price === '8,000' ? (
               <div className="text-xs font-thin">
                 <span className="line-through">10,000Ks</span>&nbsp;
-                <span className="text-[#258635]">{'(20%  off)'}</span>
+                <span className="text-[#258635] whitespace-pre">{'(20%  off)'}</span>
               </div>
             ) : (
               ''

@@ -6,6 +6,8 @@ import { InputDropDown } from '../Inputs';
 export default function EditItemModal({ closeModal }) {
   const [showDropDown1, setShowDropDown1] = useState(false);
   const [showDropDown2, setShowDropDown2] = useState(false);
+  const [valueDropDown1, setValueDropDown1] = useState('');
+  const [valueDropDown2, setValueDropDown2] = useState('');
   return (
     <div className="fixed top-0 right-0 bottom-0 left-0 z-1 flex h-full w-full items-center justify-center">
       <div className="fixed top-0 right-0 bottom-0 left-0 h-full w-full bg-black bg-opacity-50"></div>
@@ -28,12 +30,22 @@ export default function EditItemModal({ closeModal }) {
             id={'abcd'}
             show={showDropDown1}
             toggleDropDown={() => setShowDropDown1(!showDropDown1)}
+            value={valueDropDown1}
+            setValue={(state) => {
+              setValueDropDown1(state);
+              setShowDropDown1(false);
+            }}
           />
           <InputDropDown
             labelText={'Variant'}
             id={'efgh'}
             show={showDropDown2}
             toggleDropDown={() => setShowDropDown2(!showDropDown2)}
+            value={valueDropDown2}
+            setValue={(state) => {
+              setValueDropDown2(state);
+              setShowDropDown2(false);
+            }}
           />
         </div>
 

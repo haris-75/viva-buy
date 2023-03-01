@@ -12,16 +12,18 @@ export default function ProductDescription() {
   const [showProductDescription, setShowProductDescription] = useState(false);
   const [showDeliveryInfo, setShowDeliveryInfo] = useState(false);
   const [showShopPolicy, setShowShopPolicy] = useState(false);
+  const [valueDropDown1, setValueDropDown1] = useState('');
+  const [valueDropDown2, setValueDropDown2] = useState('');
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <div className="font-thin text-2xl">
+        <div className="font-thin md:text-2xl text-lg">
           <p>
             Product name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
             tempor incididunt
           </p>
         </div>
-        <h1 className="text-2xl font-bold">10,000 Ks</h1>
+        <h1 className="md:text-2xl text-lg font-bold">10,000 Ks</h1>
       </div>
 
       <InputDropDown
@@ -29,12 +31,22 @@ export default function ProductDescription() {
         id={'abcd'}
         show={showDropDown1}
         toggleDropDown={() => setShowDropDown1(!showDropDown1)}
+        value={valueDropDown1}
+        setValue={(state) => {
+          setValueDropDown1(state);
+          setShowDropDown1(false);
+        }}
       />
       <InputDropDown
         labelText={'Variant'}
         id={'efgh'}
         show={showDropDown2}
         toggleDropDown={() => setShowDropDown2(!showDropDown2)}
+        value={valueDropDown2}
+        setValue={(state) => {
+          setValueDropDown2(state);
+          setShowDropDown2(false);
+        }}
       />
       <QuantityButton />
       <div className="flex items-center">

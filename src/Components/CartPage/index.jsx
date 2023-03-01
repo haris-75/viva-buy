@@ -12,7 +12,7 @@ export default function CartPage() {
           itemsArray={[
             {
               text: 'Product name lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ',
-              price: 8000
+              price: '8,000'
             }
           ]}
           fee="2,000 Ks"
@@ -23,19 +23,19 @@ export default function CartPage() {
           itemsArray={[
             {
               text: 'Product name lorem ipsum dolor sit amet ',
-              price: 8000
+              price: '8,000'
             },
             {
               text: 'Product name lorem ipsum dolor sit amet, consectetur adipiscing elit ',
-              price: 1200
+              price: '12,000'
             },
             {
               text: 'Product name lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
-              price: 3000
+              price: '3,000'
             },
             {
               text: 'Product name lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ',
-              price: 572
+              price: '572'
             }
           ]}
           fee="Free"

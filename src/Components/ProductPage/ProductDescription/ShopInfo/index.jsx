@@ -9,7 +9,7 @@ export default function ShopInfo() {
       <div className="flex gap-[18px] md:gap-[5px] md-lg:gap-[18px] justify-between">
         <div className="flex flex-col gap-2 w-fit">
           <h1 className="text-xs">Sold by</h1>
-          <p className="text-base font-thin">
+          <p className="text-base font-thin hover:underline cursor-pointer">
             Shop name lorem ipsum dolor sit amet consectetur adipiscing elit
           </p>
           <div className="flex gap-2.5 md:gap-[5px] md-lg:gap-2.5 items-center">

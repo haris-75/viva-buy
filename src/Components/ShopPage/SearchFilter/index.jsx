@@ -63,7 +63,10 @@ export default function SearchFilter() {
             onClick={() => setShowFilterDropDown(!showFilterDropDown)}
           >
             {filterValue}
-            <img src="/assets/dropdown.svg" />
+            <img
+              src="/assets/dropdown.svg"
+              className={`${showFilterDropDown ? 'rotate-180' : ''}`}
+            />
           </button>
           <img
             className="hover:bg-hoverColor px-2.5 rounded-full"
@@ -73,7 +76,7 @@ export default function SearchFilter() {
           <div className="px-2.5 w-full shadow-shadow1 mt-4  z-10 rounded-[5px] absolute  top-10 bg-white">
             {[1, 2, 3, 4, 5, 6].map((ele) => (
               <p
-                className={`text-sm hover:bg-gray cursor-pointer rounded-full px-2.5 py-1 my-2.5 ${
+                className={`text-sm hover:bg-gray cursor-pointer rounded-full px-2.5 py-2 my-2.5 ${
                   showFilterDropDown ? '' : 'hidden'
                 }`}
                 key={ele}

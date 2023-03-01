@@ -12,13 +12,13 @@ export default function RatingDropDown({ value, setValue, toggle, show }) {
           <span className="ml-1 mr-1 sm:text-sm text-xs sm:w-[130px] xs:w-[110px] w-[110px]">
             {value}
           </span>
-          <img width={6} src="/assets/dropdown2.svg" />
+          <img width={10} src="/assets/dropdown2.svg" className={`${show ? 'rotate-180' : ''}`} />
         </span>
       </div>
-      <div className="px-2.5   shadow-shadow1 mt-1 rounded-[5px] absolute  top-10 bg-white z-1">
+      <div className="px-2.5 w-full shadow-shadow1 mt-0 sm:mt-2.5 rounded-[5px] absolute  top-10 bg-white z-1">
         {['Relevance', 'Recent', 'Rating: High to Low', 'Rating: Low to High'].map((ele) => (
           <p
-            className={`sm:text-sm text-xs hover:bg-gray cursor-pointer rounded-[5px] px-2.5 my-2.5 ${
+            className={`sm:text-sm text-xs hover:bg-gray cursor-pointer rounded-[5px] px-2.5 py-1 my-2.5 ${
               show ? '' : 'hidden'
             }`}
             key={ele}

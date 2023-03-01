@@ -11,9 +11,8 @@ export default function UserReview({ review, singleLine }) {
         <p>Username123</p>
         <span className="text-disabled">16/Oct/2022</span>
       </div>
-      <div className="flex text-sm gap-2">
+      <div className="flex text-sm gap-[5px]">
         <p className="font-black">Purchased Item:</p>
-        &nbsp;&nbsp;
         <span className="text-disabled">Product name lorem ispusm</span>
       </div>
       <div>

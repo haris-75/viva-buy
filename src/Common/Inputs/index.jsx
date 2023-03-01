@@ -70,7 +70,7 @@ export function InputRadio({ label, name, value, checked, onClick }) {
   );
 }
 
-export function InputDropDown({ show, toggleDropDown, labelText, id }) {
+export function InputDropDown({ show, toggleDropDown, labelText, id, value, setValue }) {
   return (
     <div className="relative">
       <label>{labelText}</label>
@@ -78,8 +78,8 @@ export function InputDropDown({ show, toggleDropDown, labelText, id }) {
         className="w-full cursor-pointer bg-white text-black border border-black flex  justify-between	p-2.5 rounded-md font-medium "
         onClick={toggleDropDown}
       >
-        <span>Select a variant</span>
-        <img src="/assets/dropdown.svg" />
+        <span>{value ? value : 'Select a variant'}</span>
+        <img src="/assets/dropdown.svg" className={`${show ? 'rotate-180' : ''}`} />
       </div>
 
       <div
@@ -89,7 +89,11 @@ export function InputDropDown({ show, toggleDropDown, labelText, id }) {
       >
         <ul className="p-2.5">
           {[1, 2, 3, 4].map((ele) => (
-            <li key={ele + id} className="my-2.5 px-2.5   rounded-md hover:bg-gray">
+            <li
+              key={ele + id}
+              className="my-2 px-2.5 py-1 rounded-md hover:bg-gray cursor-pointer"
+              onClick={() => setValue(`Variant ${ele}`)}
+            >
               <span>Variant {ele}</span>
             </li>
           ))}

@@ -53,18 +53,18 @@ export default function ShopHeader() {
         <div className="md:col-span-4 md-lg:col-span-3 ">
           <div className="flex justify-between p-4 sm:flex-row flex-col sm:gap-0 gap-8  ">
             <div className="lg:w-3/5 lg-xl:w-3/4 md:w-3/5 md-lg:w-3/4 sm:w-3/5 w-full">
-              <div className="text-[26px] ">
+              <div className="md:text-[26px] text-lg">
                 <p>
                   Shop name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
                 </p>
               </div>
               <div className="flex gap-3">
                 <div className="flex gap-1">
-                  <h1 className="font-black">100</h1>
+                  <h1 className="font-black cursor-pointer hover:underline">100</h1>
                   <p>Followers</p>
                 </div>
                 <div className="flex gap-1">
-                  <h1 className="font-black">100</h1>
+                  <h1 className="font-black cursor-pointer hover:underline">100</h1>
                   <p>Following</p>
                 </div>
               </div>

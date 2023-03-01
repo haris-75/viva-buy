@@ -7,7 +7,7 @@ export default function BillingInfo() {
   const [showAddCardModal, setShowAddCardModal] = useState(false);
   return (
     <>
-      <div className="border-[1px] rounded-[5px] p-2.5 xs:p-5 flex flex-col gap-6">
+      <div className="border-[1px] rounded-[5px] p-2.5 xs:p-5 flex flex-col gap-6 max-w-[600px]">
         <div className="md-lg:text-base md:text-sm sm:text-base text-xs flex justify-between">
           <div className="flex items-center gap-1">
             <div>

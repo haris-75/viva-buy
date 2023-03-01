@@ -58,9 +58,11 @@ export default function OrderForm() {
         />
         <input
           placeholder="Enter coupon code"
-          className="w-full border-[1px] border-black py-2.5 px-4 rounded-l-md pl-8 md:text-xs md-lg:text-sm xl:text-base text-base"
+          className="w-full border-[1px] border-black py-2.5 px-4 rounded-md pl-8 md:text-xs md-lg:text-sm xl:text-base text-base"
         />
-        <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md">Apply</button>
+        <button className="bg-black border-0 py-[5] px-2.5 text-white rounded-r-md absolute top-0 right-0 h-full">
+          Apply
+        </button>
       </div>
       <div className="flex flex-col items-center gap-1.5">
         <PrimaryButton

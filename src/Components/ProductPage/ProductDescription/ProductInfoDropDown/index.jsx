@@ -6,7 +6,7 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
       <div>
         <div
           onClick={toggle}
-          className="flex  justify-between hover:bg-gray rounded-full py-2.5 px-5"
+          className="flex  justify-between hover:bg-gray rounded-full py-2.5 px-5 cursor-pointer"
         >
           <h1 className=" w-full font-black">{label}</h1>
           <img

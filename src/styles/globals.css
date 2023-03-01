@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 .image-gallery-image {
+  max-width: 700px !important;
   width: 45vw !important;
   border-radius: 1%;
 }
@@ -82,8 +83,6 @@
   stroke-width: 3px !important;
 }
 
-@media screen and (max-width: 1200px) {
-}
 @media screen and (max-width: 1099px) and (min-width: 950px) {
   .image-gallery-right-nav {
     right: 7% !important;
