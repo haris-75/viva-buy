@@ -6,14 +6,14 @@ export default function ShopInfo() {
   return (
     <div className="flex flex-col gap-2.5">
       {/* top */}
-      <div className="flex gap-[18px] justify-between">
-        <div className="flex flex-col gap-2">
+      <div className="flex gap-[18px] md:gap-[5px] md-lg:gap-[18px] justify-between">
+        <div className="flex flex-col gap-2 w-fit">
           <h1 className="text-xs">Sold by</h1>
           <p className="text-base font-thin">
             Shop name lorem ipsum dolor sit amet consectetur adipiscing elit
           </p>
-          <div className="flex gap-2.5 items-center">
-            <img src={Rating['src']} className=" group-hover/item:flex md:w-[80px]" />
+          <div className="flex gap-2.5 md:gap-[5px] md-lg:gap-2.5 items-center">
+            <img src={Rating['src']} className=" group-hover/item:flex md:w-[70px] lg:w-[80px]" />
             <span className="text-disabled text-xs">(141)</span>
             <SmallBtn>
               <img src="/assets/star.svg" />

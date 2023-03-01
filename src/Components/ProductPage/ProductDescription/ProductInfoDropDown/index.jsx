@@ -19,7 +19,7 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
         {delivery ? (
           <div className="flex flex-col gap-2.5  mb-2.5">
             <div className="flex justify-between">
-              <div className="flex gap-2.5 items-center">
+              <div className="flex md-lg:gap-2.5 md:gap-[5px] gap-2.5 items-center">
                 <div>
                   <img src="/assets/cart/delivery.svg" />
                 </div>
@@ -29,11 +29,11 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
               <div className="text-disabled font-xxs">Change</div>
             </div>
             <div className="flex justify-between">
-              <div className="flex gap-2.5 items-center">
+              <div className="flex md-lg:gap-2.5 md:gap-[5px] gap-2.5 items-center">
                 <div>
                   <img src="/assets/cart/truck.svg" />
                 </div>
-                <span className="font-black">Standard Delivery</span> &nbsp;&nbsp;
+                <span className="font-black w-fit">Standard Delivery</span> &nbsp;&nbsp;
                 <span className="font-thin">2-3 days</span>
               </div>
               <div className="font-black font-xxs">4,000 Ks</div>
@@ -42,9 +42,6 @@ export default function ProductInfoDropDown({ label, textArray, show, toggle, de
         ) : (
           ''
         )}
-        {/* {textArray?.map((ele) => (
-          <p key={ele}>{ele}</p>
-        ))} */}
         <p>{textArray?.join(' ')}</p>
         {subList ? (
           <ul className="list-disc pl-5 mt-2.5">

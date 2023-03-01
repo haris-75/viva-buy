@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { navigateToPage } from '../../../utils/navigation';
 import { HeartOutlinedIcon } from '../../Svg';
 
@@ -8,14 +9,20 @@ import { HeartOutlinedIcon } from '../../Svg';
 }
 export default function RecentViewedCard(props) {
   const route = useRouter();
+  const isMobile = useMediaQuery({
+    query: '(max-width: 530px)'
+  });
   return (
     <div
       onClick={() => navigateToPage(route, 'shop')}
-      className="flex w-1/4 flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
+      className="flex w-[35%] flex-col flex-nowrap rounded-[5px] p-[5px] transition-all hover:shadow-shadow1 lg:w-1/5 lg:rounded-[5px] lg:p-[10px] xl:w-1/6"
     >
       <div className="cursor-pointer rounded-[5px] lg:rounded-[5px] relative group/item">
-        <div className="absolute border-2 rounded-full p-1 bg-white  right-2.5 top-2.5 hover:shadow-shadow1 hover:border-white group-hover/item:block hidden">
-          <HeartOutlinedIcon className="fill-black hover:fill-[#FF0000]" />
+        <div className="absolute border-2 rounded-full xs-m:p-1 py-[2px] px-[4px] bg-white  xs-m:right-2.5 xs-m:top-2.5 right-[2px] top-[2px] hover:shadow-shadow1 hover:border-white group-hover/item:block hidden">
+          <HeartOutlinedIcon
+            width={isMobile ? '15' : '20'}
+            className="fill-black hover:fill-[#FF0000] xs-m:w-auto  w-[15px]"
+          />
         </div>
         <div className="overflow-hidden rounded-[5px] bg-gray lg:rounded-[5px]">
           <img

@@ -126,7 +126,13 @@ export const GlobalIcon = () => {
 
 export const HeartOutlinedIcon = (props) => {
   return (
-    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={props.width}
+      height="18"
+      viewBox="0 0 20 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

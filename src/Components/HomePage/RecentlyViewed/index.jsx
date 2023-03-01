@@ -6,8 +6,11 @@ import { useMediaQuery } from 'react-responsive';
   /*  recently viewed list */
 }
 export default function RecentlyViewed({ label, description }) {
+  const isTablet = useMediaQuery({
+    query: '(max-width: 768px)'
+  });
   const isMobile = useMediaQuery({
-    query: '(max-width: 640px)'
+    query: '(max-width: 530px)'
   });
   return (
     <div className="mt-5 md:mt-20">
@@ -25,9 +28,11 @@ export default function RecentlyViewed({ label, description }) {
         <RecentViewedCard />
         <RecentViewedCard />
         <RecentViewedCard />
-        <RecentViewedCard />
+        {isMobile ? '' : <RecentViewedCard />}
 
-        {isMobile ? null : (
+        {isTablet ? (
+          ''
+        ) : (
           <>
             <RecentViewedCard />
             <RecentViewedCard />
