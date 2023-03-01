@@ -5,27 +5,27 @@ import CheckoutItemCard from './CheckoutItemCard';
 
 export default function CheckoutPage() {
   return (
-    <div className="grid md:grid-cols-2 xs:grid-cols-1 gap-12">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
       <div className="flex flex-col gap-4">
         <h1 className="font-bold text-2xl">Please confirm and submit your order</h1>
         <BillingInfo />
       </div>
-      <div className="bg-white-secondary flex flex-col md-lg:p-10 md:p-5 sm:p-10 xs:p-3  gap-8">
+      <div className="bg-white-secondary flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-3  gap-8">
         <div className="flex flex-col gap-2.5">
           <CheckoutItemCard price={10000} discountedPrice={8000} count={1} />
           <CheckoutItemCard price={40000} discountedPrice={32000} count={4} />
         </div>
         <div>
           <div className="flex flex-col gap-2.5">
-            <div className="flex justify-between border-t-[1px] pt-1 md-lg:text-base md:text-sm sm:text-base xs:text-xs">
+            <div className="flex justify-between border-t-[1px] pt-1 md-lg:text-base md:text-sm sm:text-base text-xs">
               <span>{'Sub total (5 items)'}</span>
               <span>44,000 Ks</span>
             </div>
-            <div className="flex justify-between md-lg:text-base md:text-sm sm:text-base xs:text-xs">
+            <div className="flex justify-between md-lg:text-base md:text-sm sm:text-base text-xs">
               <span>{'Delivery  fee'}</span>
               <span>2,000 Ks</span>
             </div>
-            <div className="flex justify-between font-bold border-t-[1px] pt-1 md-lg:text-base md:text-sm sm:text-base xs:text-xs">
+            <div className="flex justify-between font-bold border-t-[1px] pt-1 md-lg:text-base md:text-sm sm:text-base text-xs">
               <span>{'Total (5 items)'}</span>
               <span>46,000 Ks</span>
             </div>

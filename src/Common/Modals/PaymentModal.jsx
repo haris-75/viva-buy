@@ -119,7 +119,12 @@ export default function PaymentModal({ showAddCardModal, closeModal }) {
 
         {/* Confirm Button */}
         <div className="my-5 flex justify-center">
-          <PrimaryButton onClick={closeModal}>Confirm payment method</PrimaryButton>
+          <PrimaryButton
+            className="h-[40px] w-full max-w-[400px] rounded-[35px] bg-primary sm:px-9 sm:py-[4px] px-4 py-[2px]  text-center font-sans text-base font-bold leading-6 text-black transition-all duration-200 hover:shadow-shadow1"
+            onClick={closeModal}
+          >
+            Confirm payment method
+          </PrimaryButton>
         </div>
       </div>
     </div>
