@@ -10,7 +10,7 @@ export default function ShopReview({ singleLine }) {
   return (
     <div className="px-2">
       <div className="flex xs:flex-row flex-col items-center justify-between mb-10 border-gray border-b">
-        <h1 className="sm:text-xl text-lg">Shop reviews</h1>
+        <h1 className="md:text-xl text-base">Shop reviews</h1>
         <RatingDropDown
           value={ratingValue}
           setValue={(value) => setRatingValue(value)}

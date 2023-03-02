@@ -58,7 +58,7 @@ export default function ShopHeader() {
                   Shop name lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
                 </p>
               </div>
-              <div className="flex gap-3">
+              <div className="flex gap-3 mt-2.5">
                 <div className="flex gap-1">
                   <h1 className="font-black cursor-pointer hover:underline">100</h1>
                   <p>Followers</p>

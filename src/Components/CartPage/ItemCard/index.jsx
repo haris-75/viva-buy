@@ -25,17 +25,15 @@ export default function ItemCard({ itemsArray, fee, date, shipsFrom }) {
         />
         <div className="xs-m:p-0 pl-1">
           <div className="font-bold">
-            <span className="sm:text-base text-[11px]">Deliver fee:</span>&nbsp;
-            <span className={`sm:text-xl text-[13px] ${fee === 'Free' ? 'text-[#258635]' : ''}`}>
-              {fee}
-            </span>
+            <span className="text-base ">Deliver fee:</span>&nbsp;
+            <span className={`text-xl ${fee === 'Free' ? 'text-[#258635]' : ''}`}>{fee}</span>
           </div>
           <div>
-            <div className="font-thin sm:text-sm text-[10px]">
+            <div className="font-thin text-sm ">
               <span>Earliest delivery:</span>&nbsp;
               <span>{date}</span>
             </div>
-            <div className="font-thin sm:text-sm text-[10px]">
+            <div className="font-thin text-sm ">
               <span>Ships from:</span>&nbsp;
               <span>{shipsFrom}</span>
             </div>

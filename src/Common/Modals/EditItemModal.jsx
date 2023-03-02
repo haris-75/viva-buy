@@ -11,7 +11,7 @@ export default function EditItemModal({ closeModal }) {
   return (
     <div className="fixed top-0 right-0 bottom-0 left-0 z-1 flex h-full w-full items-center justify-center">
       <div className="fixed top-0 right-0 bottom-0 left-0 h-full w-full bg-black bg-opacity-50"></div>
-      <div className="flex flex-col gap-4 z-2 h-full w-full bg-white px-[40px]  pt-[30px] pb-[20px] shadow-shadow2 sm:h-screen sm:max-h-screen sm:max-w-[480px] sm:rounded-[30px]">
+      <div className="flex flex-col gap-4 z-2 h-full w-full bg-white px-[40px]  pt-[30px] pb-[20px] shadow-shadow2 sm:h-auto sm:max-w-[480px] sm:rounded-[30px]">
         {/*header */}
         <div className=" relative flex items-center justify-between font-sans">
           <h2 className="font-sans text-3xl font-bold leading-10 text-black">Edit item</h2>
