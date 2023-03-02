@@ -7,16 +7,16 @@ import ShowAlertModal from '../../Common/Modals/ShowAlertModal';
 export default function CheckoutPage() {
   const [showAlertModal, setShowAlertModal] = useState(false);
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
-      <div className="md:flex md:justify-end">
-        <div className="flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-3 gap-4">
-          <h1 className="font-bold text-2xl">Please confirm and submit your order</h1>
-          <BillingInfo />
-        </div>
+    <div className="grid md:grid-cols-2 grid-cols-1">
+      <div className="md-lg:p-10 md:p-5 sm:p-10 p-4">
+        <h1 className="font-bold md-lg:text-2xl md:text-xl text-base pb-4 m-auto md:mr-0 max-w-[600px]">
+          Please confirm and submit your order
+        </h1>
+        <BillingInfo />
       </div>
 
-      <div className="bg-white-secondary min-h-[900px] flex justify-end">
-        <div className="flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-3  gap-8 max-w-[800px]">
+      <div className="bg-white-secondary min-h-[900px] flex justify-start">
+        <div className="flex flex-col md-lg:p-10 md:p-5 sm:p-10 p-4  gap-8 max-w-[800px]">
           <div className="flex flex-col gap-2.5">
             <CheckoutItemCard price={10000} discountedPrice={8000} count={1} />
             <CheckoutItemCard price={40000} discountedPrice={32000} count={4} />
