@@ -126,7 +126,7 @@ export function InputDropDownSecondary({ show, toggleDropDown, labelText, id, va
           {[1, 2, 3, 4].map((ele) => (
             <li
               key={ele + id}
-              className="my-2.5 px-2.5 cursor-pointer rounded-md hover:bg-gray"
+              className="my-2 px-2.5 py-1 cursor-pointer rounded-md hover:bg-gray"
               onClick={() => setValue(`${labelText} ${ele}`)}
             >
               <span>

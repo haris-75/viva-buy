@@ -48,7 +48,10 @@ export default function EditAddressModal({ closeModal, edit }) {
                 labelText={'Region'}
                 id={'add-address-region'}
                 value={region}
-                setValue={setRegion}
+                setValue={(state) => {
+                  setRegion(state);
+                  setShowRegionDropDown(false);
+                }}
               />
             </div>
             <div className="w-full">
@@ -58,7 +61,10 @@ export default function EditAddressModal({ closeModal, edit }) {
                 labelText={'City'}
                 id={'add-address-city'}
                 value={city}
-                setValue={setCity}
+                setValue={(state) => {
+                  setCity(state);
+                  setShowCityDropDown(false);
+                }}
               />
             </div>
             <div className="w-full">
@@ -68,7 +74,10 @@ export default function EditAddressModal({ closeModal, edit }) {
                 labelText={'Township'}
                 id={'add-address-township'}
                 value={township}
-                setValue={setTownship}
+                setValue={(state) => {
+                  setTownship(state);
+                  setShowTownshipDropDown(false);
+                }}
               />
             </div>
           </div>
